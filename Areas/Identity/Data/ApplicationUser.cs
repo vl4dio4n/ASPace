@@ -28,5 +28,12 @@ public class ApplicationUser : IdentityUser
 
     public virtual ICollection<Group>? Groups { get; set; }
     public virtual ICollection<GroupMember>? GroupMembers { get; set; }
+
+    public virtual ICollection<Post>? Posts { get; set; }
+    public virtual ICollection<PostLike>? PostLikes { get; set; }
+    public virtual ICollection<Comment>? Comments { get; set; }
+    public virtual ICollection<CommentLike>? CommentLikes { get; set; }
+    public virtual ICollection<GroupRequest>? GroupRequests { get; set; }
+
 }
 

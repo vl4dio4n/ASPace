@@ -1,0 +1,114 @@
+@model ASPace.Models.Post
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<br />
+<div class="row">
+    <div class="col-md-4">
+        @Html.ActionLink(" Go to posts", "Index", new { controller = "Posts" }, new { @class = "btn btn-warning btn-block bi bi-arrow-left" })
+    </div>
+</div>
+
+<br />
+
+<div class="card mx-auto" style="width: 60rem;">
+    <div class="card-body">
+        @Html.Partial("PartialPost", Model)
+    </div>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-2" style="text-align:center">
+            <!--Like section-->
+            @if (!ViewBag.IsLikedByUser)
+            {
+                using (Html.BeginForm(actionName: "New", controllerName: "PostLikes", method: FormMethod.Post))
+                {
+                    @Html.Hidden("PostId", Model.PostId)
+                    @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="bi bi-hand-thumbs-up"></i> Like post  </button>
+                    @Html.Partial("PartialPostLike")
+
+                }
+            }
+            else
+            {
+                using (Html.BeginForm(actionName: "Delete", controllerName: "PostLikes", method: FormMethod.Post, routeValues: new { PostId = Model.PostId, UserId = (string)ViewBag.CurrentUser.Item1 }))
+                {
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-hand-thumbs-up"></i>  Like post  </button>
+                    @Html.Partial("PartialPostLike")
+
+                }
+            }
+
+        </div>
+        @if (ViewBag.CurrentUser.Item2)
+        {
+            if (ViewBag.CurrentUser.Item1 == Model.UserId)
+            {
+                <div class="col-md-2" style="text-align:center">
+                    <a href="/Posts/Edit/@Model.PostId" class="btn btn-outline-dark"><i class="bi bi-pencil"></i>  Edit post</a>
+                </div>
+            }
+
+            <div class="col-md-2" style="text-align:center">
+                @using (Html.BeginForm(actionName: "Delete", controllerName: "Posts", method: FormMethod.Post, routeValues: new { id = Model.PostId }))
+                {
+                    <button type="submit" class="btn btn-outline-danger"><i class="bi bi-trash"></i>  Delete post</button>
+                }
+            </div>
+            <br />
+
+        }
+        else
+        {
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <br />
+        }
+        <div class="clearfix"></div>
+        <div class="col-md-3"></div>
+        <br />
+    </div>
+    </div>
+
+
+@*comments*@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        @using (Html.BeginForm(actionName: "New", controllerName: "Comments"))
+        {
+            <div class="card my-4">
+                @*@Html.ValidationSummary(false, "", new { @class = "text-danger" })*@
+
+                @Html.Hidden("PostId", Model.PostId)
+                @Html.Label("Content", "Enter your comment", new { @class = "card-header" })
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            @Html.TextArea("Content", "", new { @class = "form-control form-control-lg", @style = "resize: none; width: 80%" })
+                        </div>
+                        <div class="col-md-4">
+                            @*@Html.ValidationMessage("Content", "Mesaj", new { @class = "text-danger" })*@
+                            <button class="btn btn-success pull-right" type="submit">Add comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <br />
+        <br />
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+@foreach (ASPace.Models.Comment comm in Model.Comments)
+{
+    @Html.Partial("PartialComment", comm);
+}

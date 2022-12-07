@@ -175,6 +175,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Comments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbWVudHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Comments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbWVudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/FriendRequests/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnJpZW5kUmVxdWVzdHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -187,8 +195,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Posts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Posts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Posts/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Posts/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Shared/PartialComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Shared/PartialCommentLike.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxDb21tZW50TGlrZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Shared/PartialPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Shared/PartialPostLike.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxQb3N0TGlrZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/Views/Shared/_LoginPartial.cshtml]

@@ -27,8 +27,9 @@ namespace ArticlesApp.Controllers{
         [Authorize(Roles="User,Moderator,Admin")]
         public IActionResult Index(string id){
             string userId = _userManager.GetUserId(User);
+            string userName = _userManager.GetUserName(User);
 
-            if(userId == id){
+            if(userName == id){
                 if(TempData.ContainsKey("message")){
                     ViewBag.Message = TempData["message"];
                 }

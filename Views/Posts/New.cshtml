@@ -1,0 +1,45 @@
+@model ASPace.Models.Post
+
+@{
+    ViewBag.Title = "New Post";
+}
+
+
+<div class="card">
+    <h2>Add a new post!</h2>
+    @using (Html.BeginForm(actionName: "New", controllerName: "Posts"))
+    {
+        <div class="form">
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <strong> @Html.Label("Title", "Post Title")</strong>
+            <br />
+            @Html.TextBox("Title", "", new { @class = "form__input " })
+            @Html.ValidationMessage("Title", null, new { @class = "text-danger" })
+            <br />
+            <br />
+            <strong>@Html.Label("Content", "Post description:")</strong>
+            <br />
+            @Html.TextArea("Content", Model.Content, new { @class = "form__input" })
+            @Html.ValidationMessage("Content", null, new { @class = "text-danger" })
+            <br />
+            @{
+                TempData["action"] = "Index";
+                TempData["controller"] = "Posts";
+                TempData["id"] = null;
+            }
+            <br />
+            @Html.HiddenFor(m => m.Date)
+            @Html.HiddenFor(m => m.UserId)
+
+
+            <div class="row">
+                <div class="col-md-8"><button type="submit" class="btn btn-success btn-lg btn-block pull-left">Add post</button></div>
+                <div class="col-md-4">@Html.ActionLink("Back to posts", "Index", new { controller = "Posts" }, new { @class = "btn btn-warning btn-lg btn-block pull-right" })</div>
+            </div>
+
+
+            <br />
+        </div>
+    }
+    <br />
+</div>

@@ -1,0 +1,67 @@
+@model ASPace.Models.Comment;
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="container">
+            <!--Check if the comment is liked by the current user-->
+            @{ bool IsLikedByCurrentUser = false; }
+            @if (Model.CommentLikes != null)
+            {
+                @foreach (ASPace.Models.CommentLike cl in Model.CommentLikes)
+                {
+                        <p>@cl.UserId</p>
+                    if (cl.UserId == ViewBag.CurrentUser.Item1)
+                    {
+                        IsLikedByCurrentUser = true;
+                        break;
+                    }
+                }
+            }
+            <div class="media mb-4">
+                <div class="media-body">
+                    <div>
+                        <h5 class="mt-0"><i class="bi bi-person-circle"></i> @Model.UserId @*aici va fi username*@</h5>
+                        <p>@Model.Content</p>
+                        <small class="pull-right show-date">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss")</small>
+                    </div>
+                    <!--Like button-->
+                    <div style="display: inline-block; float: left; margin-right: 15px">
+                        @if (!IsLikedByCurrentUser)
+                        {
+                            using (Html.BeginForm(actionName: "New", controllerName: "CommentLikes", method: FormMethod.Post))
+                            {
+                                @Html.Hidden("CommentId", (int)Model.CommentId)
+                                @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
+
+                                <button type="submit" style="border: none; background: transparent" class="btn btn-link btn-sm"> Like </button>
+                                @*@Html.Partial("PartialCommentLike");*@
+                            }
+                        }
+                        else
+                        {
+                            using (Html.BeginForm(actionName: "Delete", controllerName: "CommentLikes", method: FormMethod.Post, routeValues: new { CommentId = Model.CommentId, UserId = (string)ViewBag.CurrentUser.Item1 }))
+                            {
+                                <button type="submit" style="color: blue; border: none; background: transparent"> Like </button>
+                                @*@Html.Partial("PartialCommentLike")*@
+                            }
+                        }
+                    </div>
+                    <!--Delete/Edit Buttons (requires permission)-->
+                    @if (ViewBag.CurrentUser.Item2 || ViewBag.CurrentUser.Item1 == Model.UserId)
+                    {
+                        <div style="display: inline-block; float: left; margin-right: 15px; text-align:center">
+                            <a href="/Comments/Edit/@Model.CommentId" class="btn btn-link btn-sm"> Edit </a>
+                        </div>
+                        <div style="display: inline-block; float: left; text-align: center; ">
+                            <a href="/Comments/Delete/@Model.CommentId" class="btn btn-link btn-sm" style="color: red;"> Delete </a>
+                        </div>
+
+                    }
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <hr />
+    </div>
+    <div class="col-md-2"></div>
+</div>

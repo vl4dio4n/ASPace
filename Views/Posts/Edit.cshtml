@@ -1,0 +1,28 @@
+@model ASPace.Models.Post
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="card">
+    @using (Html.BeginForm(actionName: "Edit", controllerName: "Posts"))
+    {
+        <div class="form">
+            <strong> @Html.Label("Title", "Post title")</strong>
+            <br />
+            @Html.TextBox("Title", Model.Title, new { @class = "form__input" })
+            @Html.ValidationMessage("Title", null, new { @class = "text-danger" })
+            <br />
+            <br />
+            <strong>@Html.Label("Content", "Post's Content:")</strong>
+            <br />
+            @Html.Editor("Content", Model.Content, new { @class = "form__input" })
+            @Html.ValidationMessage("Content", null, new { @class = "text-danger" })
+            <br />
+            @Html.HiddenFor(m => m.Date)
+
+
+            <button class="btn btn-sm btn-success" type="submit">Edit Post</button>
+        </div>
+    }
+</div>

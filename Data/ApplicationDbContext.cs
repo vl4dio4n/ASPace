@@ -25,6 +25,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         builder.Entity<GroupMember>().HasKey(table => new {
             table.UserId, table.GroupId
         });
+        builder.Entity<GroupRequest>().HasKey(table => new {
+            table.SenderId, table.ReceiverId
+        });
 
         builder.Entity<Request>()
                     .HasOne(m => m.Sender)
@@ -46,6 +49,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                     .WithMany(t => t.SecondFriends)
                     .HasForeignKey(m => m.SecondId);
 
+        builder.Entity<CommentLike>()
+                    .HasKey(pt => new { pt.CommentId, pt.UserId });
+        builder.Entity<PostLike>()
+                    .HasKey(pt => new { pt.PostId, pt.UserId });
+
         base.OnModelCreating(builder);
      }
 
@@ -53,4 +61,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Request> Requests { get; set; }
     public DbSet<Friendship> Friendships { get; set; }
     public DbSet<GroupMember> GroupMembers { get; set; }
+    public DbSet<Post>? Posts { get; set; }
+    public DbSet<Comment>? Comments { get; set; }
+    public DbSet<PostLike>? PostLikes { get; set; }
+    public DbSet<CommentLike>? CommentLikes { get; set; }
+    public DbSet<GroupRequest>? GroupRequests { get; set; }
 }

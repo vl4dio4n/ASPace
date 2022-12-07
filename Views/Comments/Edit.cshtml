@@ -1,0 +1,32 @@
+@model ASPace.Models.Comment
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h1>@TempData["message"]</h1>
+<h2>Edit comment</h2>
+
+<div class="card">
+    @using (Html.BeginForm(actionName: "Edit", controllerName: "Comments", method: FormMethod.Post, routeValues: new { id = Model.CommentId }))
+    {
+        <div class="form">
+            @Html.HiddenFor(m => m.CommentId)
+            @Html.HiddenFor(m => m.PostId)
+            @Html.HiddenFor(m => m.LikeCount)
+
+            <br /><br />
+
+            @Html.Label("Content", "Comment's content")
+            <br />
+            @Html.EditorFor(m => m.Content, new { htmlAttributes = new { @class = "form-control" } })
+
+            @Html.ValidationMessageFor(m => m.Content, null, new { @class = "text-danger" })
+            <br /><br />
+
+            @Html.HiddenFor(m => m.Date)
+            <button class="btn btn-success btn-sm" type="submit">Save</button>
+        </div>
+    }
+</div>
+
+

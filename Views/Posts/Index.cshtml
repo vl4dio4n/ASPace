@@ -1,0 +1,29 @@
+@{
+    ViewBag.Title = "Posts";
+}
+
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-success" role="alert" style="text-align:center; margin-top:20px;">
+        @TempData["message"]
+    </div>
+}
+
+<br />
+
+@Html.ActionLink("Add post", "New", "Posts", null, new { @class = "btn btn-primary", @style = "margin-right: 10px;" })
+
+<br />
+
+@foreach (ASPace.Models.Post post in ViewBag.Posts)
+{
+    <div class="card" style="margin-top: 1em">
+        <div class="card-body">
+            @Html.Partial("PartialPost", post)
+
+            <div class="panel-footer">
+                <a class=" btn btn-success btn-lg btn-block" href="/Posts/Show/@post.PostId">View post</a>
+            </div>
+        </div>
+    </div>
+}
