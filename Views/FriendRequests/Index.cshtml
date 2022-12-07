@@ -1,0 +1,77 @@
+@{
+    ViewBag.Title = "Friend Requests";
+}
+
+@if(ViewBag.Message != null){
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6" align="center">
+            <div class="toast show align-items-center text-white bg-success border-0 m-4" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">@ViewBag.Message</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+}
+
+@if(ViewBag.Requests.Length == 0){
+    <h2 class="mb-5">You haven't any pending friend requests</h2>
+} else {
+    <h2 class="mb-5">You have @ViewBag.Requests.Length friend request(s)</h2>
+}
+
+
+@for(int i = 0; i < ViewBag.Requests.Length; i = i + 3){
+    <div class="row mb-4">
+    @for(int j = i; j < Math.Min(ViewBag.Requests.Length, i + 3); j ++){
+        var request = ViewBag.Requests[j];
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header d-flex flex-row justify-content-between">
+                    <h5><a class="text-dark text-decoration-none" href="/Users/Show/@request.UserName">@request.UserName</a></h5>
+                    <small>@request.RequestDate</small>
+                </div>
+                <div class="card-body d-flex flex-row justify-content-between">
+                    <form method="post" action="/Friendships/New/@request.UserId">
+                        <button class="btn btn-outline-dark">Accept</button>
+                    </form>
+                    <form method="post" action="/FriendRequests/Delete/@request.UserId">
+                        <button class="btn btn-outline-dark">Reject</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+}
+
+@if(ViewBag.MyRequests.Length == 0){
+    <h2 class="mt-5 mb-5">You haven't any friend requests sent waiting to be accepted</h2>
+} else {
+    <h2 class="mt-5 mb-5">You have @ViewBag.MyRequests.Length friend request(s) sent waiting to be accepted</h2>
+}
+
+
+@for(int i = 0; i < ViewBag.MyRequests.Length; i = i + 3){
+    <div class="row mb-4">
+    @for(int j = i; j < Math.Min(ViewBag.MyRequests.Length, i + 3); j ++){
+        var request = ViewBag.MyRequests[j];
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header d-flex flex-row justify-content-between">
+                    <h5><a class="text-dark text-decoration-none" href="/Users/Show/@request.UserName">@request.UserName</a></h5>
+                    <small>@request.RequestDate</small>
+                </div>
+                <div class="card-body d-flex flex-row justify-content-between">
+                    <form method="post" action="/FriendRequests/Cancel/@request.UserId">
+                        <button class="btn btn-outline-dark">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+}

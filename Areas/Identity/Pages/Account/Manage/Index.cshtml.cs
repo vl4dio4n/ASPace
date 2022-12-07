@@ -56,9 +56,39 @@ namespace ASPace.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Phone]
-            [Display(Name = "Phone number")]
-            public string PhoneNumber { get; set; }
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Username")]
+            public string UserName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "First Name")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Last Name")]
+            public string LastName { get; set; }
+
+            [Required]
+            [Display(Name = "Birth Date")]
+            [DataType(DataType.Date)]
+            public DateTime BirthDate { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "About Me")]
+            public string Description { get; set; }
+
+            // [Phone]
+            // [Display(Name = "Phone number")]
+            // public string PhoneNumber { get; set; }
+
+            [Required]
+            [Display(Name = "Visibility")]
+            public string IsPublic { get; set; }
+
         }
 
         private async Task LoadAsync(ApplicationUser user)
@@ -70,7 +100,13 @@ namespace ASPace.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                UserName = userName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                BirthDate = user.BirthDate,
+                Description = user.Description,
+                IsPublic = user.IsPublic ? "1" : "0",
+                // PhoneNumber = phoneNumber
             };
         }
 
@@ -100,15 +136,40 @@ namespace ASPace.Areas.Identity.Pages.Account.Manage
                 return Page();
             }
 
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
-            {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
-                {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
-                    return RedirectToPage();
-                }
+            // var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            // if (Input.PhoneNumber != phoneNumber)
+            // {
+            //     var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
+            //     if (!setPhoneResult.Succeeded)
+            //     {
+            //         StatusMessage = "Unexpected error when trying to set phone number.";
+            //         return RedirectToPage();
+            //     }
+            // }
+            var userName = await _userManager.GetUserNameAsync(user);
+            if (Input.UserName != userName)
+                user.UserName = Input.UserName;
+
+            if (Input.FirstName != user.FirstName){
+                user.FirstName = Input.FirstName;
+            }
+            if (Input.LastName != user.LastName){
+                user.LastName = Input.LastName;
+            }
+            if (Input.BirthDate != user.BirthDate){
+                user.BirthDate = Input.BirthDate;
+            }
+            if (Input.Description != user.Description){
+                user.Description = Input.Description;
+            }
+            if ((Input.IsPublic == "1") != user.IsPublic){
+                user.IsPublic = (Input.IsPublic == "1");
+            }
+
+            var setUserResult = await _userManager.UpdateAsync(user);
+            if (!setUserResult.Succeeded){
+                StatusMessage = "Unexpected error when trying to update user profile.";
+                return RedirectToPage();
             }
 
             await _signInManager.RefreshSignInAsync(user);
