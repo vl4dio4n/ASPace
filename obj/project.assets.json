@@ -9876,11 +9876,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/ASPace.csproj",
+      "projectUniqueName": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/ASPace.csproj",
       "projectName": "ASPace",
-      "projectPath": "/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/ASPace.csproj",
+      "projectPath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/ASPace.csproj",
       "packagesPath": "/home/vl4dio4n/.nuget/packages/",
-      "outputPath": "/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/obj/",
+      "outputPath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vl4dio4n/.nuget/NuGet/NuGet.Config"

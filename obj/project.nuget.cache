@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K3WjFQ09JSl/xEN1+CHD40UNQqEWwB16yEAhG4UBd5qrTSU34bJJsQYB2kjqz7RLs/gwhYuPIRVv8KajNBCkgA==",
+  "dgSpecHash": "bLmG7VXfl3E8umJEqEUCw1JcjSpkDgDiRDzQdOKUkniAqqe1yfTQZ5ZVd3i8JOgEba+sk5Aanz4jyM1e8Q9e1w==",
   "success": true,
-  "projectFilePath": "/home/vl4dio4n/UniBuc/asc.net/Projects/ASPace/ASPace.csproj",
+  "projectFilePath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/ASPace.csproj",
   "expectedPackageFiles": [
     "/home/vl4dio4n/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/vl4dio4n/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
