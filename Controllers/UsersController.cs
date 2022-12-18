@@ -1,6 +1,7 @@
 using ASPace.Areas.Identity.Data;
 using ASPace.Data;
 using ASPace.Models;
+using ASPace.CustomClasses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
@@ -35,6 +36,11 @@ namespace ArticlesApp.Controllers{
                 ViewBag.Message = TempData["message"];
             }
 
+            if(!db.Users.Any(user => user.UserName == id)){
+                TempData["message"] = $"User {id} doesn't exist";
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            
             SetUserProfile(id);
             
             bool isFriend = false;
@@ -45,7 +51,8 @@ namespace ArticlesApp.Controllers{
             if(user.UserName == id || isFriend || ViewBag.IsPublic){
                 return View();
             } else {
-                return StatusCode(StatusCodes.Status401Unauthorized);
+                TempData["message"] = "This profile is private.";
+                return StatusCode(StatusCodes.Status403Forbidden);
             }
         }
 
@@ -95,34 +102,49 @@ namespace ArticlesApp.Controllers{
             ViewBag.MyRequests = GetUserRequests(_userManager.GetUserId(User)).ToArray();
         }
 
-        private IEnumerable<Object> GetUserFriends(string id){
-            var friends = (from friend in db.Friendships
+        private IEnumerable<UserFriend> GetUserFriends(string id){
+            IEnumerable<UserFriend> friends = (from friend in db.Friendships
                             join user in db.Users on friend.SecondId equals user.Id
                             where friend.FirstId == id
                             orderby friend.AcceptDate descending
-                            select new {
-                                UserName = user.UserName,
-                                UserId = user.Id,
-                                AcceptDate = friend.AcceptDate
-                            }).Union(from friend in db.Friendships
+                            select new UserFriend(user.UserName, user.Id, friend.AcceptDate)).AsEnumerable<UserFriend>()
+                            .Union(from friend in db.Friendships
                                 join user in db.Users on friend.FirstId equals user.Id
                                 where friend.SecondId == id
                                 orderby friend.AcceptDate descending
-                                select new {
-                                    UserName = user.UserName,
-                                    UserId = user.Id,
-                                    AcceptDate = friend.AcceptDate
-                                });
+                                select new UserFriend(user.UserName, user.Id, friend.AcceptDate));
             return friends;
         }
 
-        private IEnumerable<Object> GetUserRequests(string id){
+        private IEnumerable<UserRequest> GetUserRequests(string id){
             var requests = (from request in db.Requests
                             where request.SenderId == id
-                            select new {
-                                ReceiverId = request.ReceiverId
-                            });
+                            select new UserRequest(request.ReceiverId));
             return requests;
+        }
+
+        [HttpPost]
+        public JsonResult Search(string str){
+            str = str.ToLower();
+            List<UserFriend> friends = GetUserFriends(_userManager.GetUserId(User)).ToList<UserFriend>();
+            List<UserRequest> requests = GetUserRequests(_userManager.GetUserId(User)).ToList<UserRequest>();
+            
+            List<UserInfo> users = (from user in db.Users 
+                        where user.UserName.ToLower().Contains(str) 
+                            || (user.FirstName + user.LastName).ToLower().Contains(str) 
+                            || (user.LastName + user.FirstName).ToLower().Contains(str)
+                        select new UserInfo(user.UserName, user.Id, user.FirstName, user.LastName)).ToList<UserInfo>();
+
+            foreach(UserInfo user in users){
+                user.IsFriend = friends.Any(friend => user.UserId == friend.UserId);
+                user.SentRequest = requests.Any(request => user.UserId == request.ReceiverId);
+                if(user.UserId == _userManager.GetUserId(User)){
+                    user.IsFriend = true;
+                    user.SentRequest = true;
+                }
+            }
+
+            return Json(users);
         }
     }
 }

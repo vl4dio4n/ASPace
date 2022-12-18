@@ -48,7 +48,9 @@
                                 </form>
                             }
                         } else if(isFriend){
-                            <button class="btn btn-outline-dark" title="Send Message"><i class="bi bi-send-fill"></i></button>
+                            <form method="post" action="/Chats/Show?FirstUser=@ViewBag.CurrentUser&SecondUser=@ViewBag.UserName">
+                                <button class="btn btn-outline-dark" title="Send Message"><i class="bi bi-send-fill"></i></button>
+                            </form>
                             <form method="post" action="/Friendships/Delete/@ViewBag.UserId">
                                 <button class="btn btn-outline-dark" title="Remove Friend"><i class="bi bi-person-fill-dash"></i></button>
                             </form>

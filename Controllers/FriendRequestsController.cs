@@ -57,7 +57,8 @@ namespace ArticlesApp.Controllers{
                 ViewBag.MyRequests = myRequests.ToArray();
                 return View();
             } else {
-                return StatusCode(StatusCodes.Status401Unauthorized);
+                TempData["message"] = "You shouldn't have tried to access this page. You have 5 seconds to leave or else...";
+                return StatusCode(StatusCodes.Status403Forbidden);
             }
         }
 
@@ -90,11 +91,12 @@ namespace ArticlesApp.Controllers{
         [HttpPost]
         public IActionResult Cancel(string id){
             string userId = _userManager.GetUserId(User);
+            string userName = _userManager.GetUserName(User);
             Request request = db.Requests.Where(r => r.ReceiverId == id && r.SenderId == userId).First();
             db.Requests.Remove(request);
             db.SaveChanges();
             TempData["message"] = "Friend request canceled";
-            return RedirectToRoute(new {Controller = "FriendRequests", Action = "Index", id = userId});
+            return RedirectToRoute(new {Controller = "FriendRequests", Action = "Index", id = userName});
         }
     }
 }

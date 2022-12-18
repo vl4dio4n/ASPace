@@ -28,6 +28,7 @@ namespace ArticlesApp.Controllers{
         [Authorize(Roles="User,Moderator,Admin")]
         public IActionResult New(string id){
             string userId = _userManager.GetUserId(User);
+            string userName = _userManager.GetUserName(User);
             Friendship friendship = new Friendship();
             friendship.FirstId = userId;
             friendship.SecondId = id;
@@ -40,7 +41,7 @@ namespace ArticlesApp.Controllers{
             db.Requests.Remove(request);
             db.SaveChanges();
 
-            return RedirectToRoute(new {Controller = "FriendRequests", Action = "Index", id = userId});
+            return RedirectToRoute(new {Controller = "FriendRequests", Action = "Index", id = userName});
         }
 
         [HttpPost]

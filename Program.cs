@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ASPace.Data;
 using ASPace.Models;
 using ASPace.Areas.Identity.Data;
+using ASPace.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -36,6 +39,8 @@ else
     app.UseHsts();
 }
 
+app.UseStatusCodePagesWithRedirects("/Errors/{0}");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -48,5 +53,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Posts}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+app.MapHub<ASPaceHub>("/ASPaceHub");
 
 app.Run();

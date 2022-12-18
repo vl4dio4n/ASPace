@@ -175,12 +175,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Chats/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Chats/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdHMvU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Comments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbWVudHMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Comments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbWVudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Errors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3JzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/FriendRequests/Index.cshtml]
@@ -213,6 +225,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Shared/PartialChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxDaGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Shared/PartialComment.cshtml]

@@ -24,6 +24,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <form class="d-flex">
+                                <input class="form-control ms-3 me-2" type="search" placeholder="Search User" aria-label="Search" id="searchUserInput">
+                                <button class="btn btn-outline-light" type="button"><i class="bi bi-search" id="searchUserButton"></i></button>
+                            </form>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -41,9 +47,44 @@
             &copy; 2022 - ASPace - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <div class="modal fade" id="searchUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form class="d-flex">
+                        <input class="form-control ms-3 me-2" type="search" placeholder="Search User" aria-label="Search" id="searchUserInputModal">
+                        <button class="btn btn-outline-dark" type="button"><i class="bi bi-search" id="searchUserButtonModal"></i></button>
+                    </form>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card border-0 mb-3">
+                        <div class="card-body overflow-auto" style="max-height: 400px">
+                            <ul class="list-unstyled mb-0" id="searchUsersList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/user_search.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+@* 
+<form class="d-flex">
+    <div class="dropdown">
+        <input class="form-control ms-2 me-2" type="search" placeholder="Search" aria-label="Search" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <ul class="dropdown-menu dropdown-menu-wide" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+</form> *@

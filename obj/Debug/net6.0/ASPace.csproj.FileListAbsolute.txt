@@ -554,3 +554,4 @@
 /home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/ref/ASPace.dll
 /home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/ASPace.pdb
 /home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/ASPace.genruntimeconfig.cache
+/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/bin/Debug/net6.0/libman.json

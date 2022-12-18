@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xyPTa//hOEx+uBCyRRk/d6nArqPgWCpIFFKltfjuFyE=",
+  "Hash": "I7ZzLLTG/AUlRNMOP6CxkBOeA1LCvGl0Obv8A+Ln4Qs=",
   "Source": "ASPace",
   "BasePath": "_content/ASPace",
   "Mode": "Default",
@@ -1105,6 +1105,40 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
+      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/chat.js",
+      "SourceId": "ASPace",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "BasePath": "_content/ASPace",
+      "RelativePath": "js/chat.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/chat.js"
+    },
+    {
+      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/signalr/dist/browser/signalr.js",
+      "SourceId": "ASPace",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "BasePath": "_content/ASPace",
+      "RelativePath": "js/signalr/dist/browser/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/signalr/dist/browser/signalr.js"
+    },
+    {
       "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/site.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
@@ -1120,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/user_search.js",
+      "SourceId": "ASPace",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "BasePath": "_content/ASPace",
+      "RelativePath": "js/user_search.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/user_search.js"
     },
     {
       "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

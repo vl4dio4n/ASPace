@@ -23,6 +23,9 @@ public class ApplicationUser : IdentityUser
     public virtual ICollection<Request>? Senders { get; set; }
     public virtual ICollection<Request>? Receivers { get; set; }
 
+    public virtual ICollection<Chat>? ChatSenders { get; set; }
+    public virtual ICollection<Chat>? ChatReceivers { get; set; }
+
     public virtual ICollection<Friendship>? FirstFriends { get; set; }
     public virtual ICollection<Friendship>? SecondFriends { get; set; }
 

@@ -46,3 +46,7 @@ button.accept-policy[b-2nsav3qgwu] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+.dropdown-menu.dropdown-menu-wide[b-2nsav3qgwu] {
+  min-width: 100%;
+}

@@ -49,10 +49,22 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                     .WithMany(t => t.SecondFriends)
                     .HasForeignKey(m => m.SecondId);
 
+        builder.Entity<Chat>()
+                    .HasOne(m => m.Sender)
+                    .WithMany(t => t.ChatSenders)
+                    .HasForeignKey(m => m.SenderId);
+
+        builder.Entity<Chat>()
+                    .HasOne(m => m.Receiver)
+                    .WithMany(t => t.ChatReceivers)
+                    .HasForeignKey(m => m.ReceiverId);
+
         builder.Entity<CommentLike>()
                     .HasKey(pt => new { pt.CommentId, pt.UserId });
         builder.Entity<PostLike>()
                     .HasKey(pt => new { pt.PostId, pt.UserId });
+        builder.Entity<Chat>()
+                    .HasKey(table => new { table.SenderId, table.ReceiverId, table.Time });
 
         base.OnModelCreating(builder);
      }
@@ -66,4 +78,5 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<PostLike>? PostLikes { get; set; }
     public DbSet<CommentLike>? CommentLikes { get; set; }
     public DbSet<GroupRequest>? GroupRequests { get; set; }
+    public DbSet<Chat> Chats { get; set; }
 }
