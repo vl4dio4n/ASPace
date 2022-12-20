@@ -2,16 +2,38 @@
     ViewBag.Title = "Posts";
 }
 
-@if (TempData["message"] != null)
+<!-- For alerts -->
+@if (TempData["message"] == "You don't have enough permissions to modify this post!")
+{
+    <div class="alert alert-danger" role="alert" style="text-align:center; margin-top:20px;">
+        @TempData["message"]
+    </div>
+}
+else if (TempData["message"] != "The group has been created!" && TempData["message"] != null)
 {
     <div class="alert alert-success" role="alert" style="text-align:center; margin-top:20px;">
         @TempData["message"]
     </div>
 }
 
+<!-- Search bar -->
 <br />
+<div class="navbar navbar-light bg-light justify-content-between">
+    @if (ViewBag.SearchString != "")
+    {
+        <h3 style="font-weight: 700">Search result for "@ViewBag.SearchString"   <a href="/Posts" style="text-decoration: none; color: #000000" ;"><i class="fa fa-times" style="font-size: 70%;"></i></a></h3>
+    }
+    else
+    {
+        <h3 style="font-weight: 700;">@ViewBag.Title</h3>
+    }
+    <form class="form-inline">
+        @Html.ActionLink("Add post", "New", "Posts", null, new { @class = "btn btn-primary", @style = "margin-right: 10px;" })
+        <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search title or content" aria-label="Search" value=@ViewBag.SearchString>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
 
-@Html.ActionLink("Add post", "New", "Posts", null, new { @class = "btn btn-primary", @style = "margin-right: 10px;" })
 
 <br />
 
@@ -22,7 +44,9 @@
             @Html.Partial("PartialPost", post)
 
             <div class="panel-footer">
-                <a class=" btn btn-success btn-lg btn-block" href="/Posts/Show/@post.PostId">View post</a>
+                @Html.ActionLink("View post", "Show", "Posts", new { id = post.PostId}, new { @class = "btn btn-success btn-lg btn-block" })
+
+                @*<a class=" btn btn-success btn-lg btn-block" href="/Posts/Show/@post.PostId">View post</a>*@
             </div>
         </div>
     </div>

@@ -9,7 +9,6 @@
             {
                 @foreach (ASPace.Models.CommentLike cl in Model.CommentLikes)
                 {
-                        <p>@cl.UserId</p>
                     if (cl.UserId == ViewBag.CurrentUser.Item1)
                     {
                         IsLikedByCurrentUser = true;
@@ -20,7 +19,7 @@
             <div class="media mb-4">
                 <div class="media-body">
                     <div>
-                        <h5 class="mt-0"><i class="bi bi-person-circle"></i> @Model.UserId @*aici va fi username*@</h5>
+                        <h5 class="mt-0"><i class="bi bi-person-circle"></i> @Model.User.UserName</h5>
                         <p>@Model.Content</p>
                         <small class="pull-right show-date">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss")</small>
                     </div>
@@ -53,7 +52,10 @@
                             <a href="/Comments/Edit/@Model.CommentId" class="btn btn-link btn-sm"> Edit </a>
                         </div>
                         <div style="display: inline-block; float: left; text-align: center; ">
-                            <a href="/Comments/Delete/@Model.CommentId" class="btn btn-link btn-sm" style="color: red;"> Delete </a>
+                            @using (Html.BeginForm(actionName: "Delete", controllerName: "Comments", method: FormMethod.Post, routeValues: new { id = Model.CommentId }))
+                            {
+                                <button type="submit" class="btn btn-link btn-sm" style="color: red;"> Delete</button>
+                            }
                         </div>
 
                     }

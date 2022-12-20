@@ -8,6 +8,8 @@ using ASPace.Models;
 using ASPace.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASPace.Controllers
 {
@@ -25,7 +27,8 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        public IActionResult New(PostLike postlike)
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult New(PostLike postlike)
         {
             try
             {
@@ -38,24 +41,19 @@ namespace ASPace.Controllers
             {
                 return Redirect("/Posts/Show/" + postlike.PostId);
             }
+
         }
 
-
+        [Authorize(Roles = "User,Admin")]
         [HttpPost]
-        public IActionResult Delete(PostLike postLike)
+        public ActionResult Delete(int PostId, string UserId)
         {
-            try
-            {
-                PostLike ToDelete = db.PostLikes.Find(postLike.PostId, postLike.UserId);
-                db.PostLikes.Remove(ToDelete);
-                db.Posts.Find(postLike.PostId).LikeCount--;
-                db.SaveChanges();
-                return Redirect("/Posts/Show/" + postLike.PostId);
-            }
-            catch (Exception e)
-            {
-                return Redirect("/Posts/Show/" + postLike.PostId);
-            }
+            PostLike? ToDelete = db.PostLikes.Where(m => m.PostId == PostId && m.UserId == UserId).Include("User").Include("Post").First();
+
+            db.PostLikes.Remove(ToDelete);
+            db.Posts.Find(PostId).LikeCount--;
+            db.SaveChanges();
+            return Redirect("/Posts/Show/" + PostId);
         }
     }
 }

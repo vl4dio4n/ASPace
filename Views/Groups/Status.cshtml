@@ -1,0 +1,62 @@
+@model ASPace.Models.Group
+@{
+    ViewBag.Title = "Show Status";
+    int cntRequests = 0;
+}
+
+
+<div class="row">
+    <div class="col-2">
+        <a class="btn background-color-cream3 pull-right" href="/Groups/Show/@Model.Id">Go back to your group</a>
+    </div>
+    <div class="col-4">
+        <div class="card card-blue2">
+            <div class="card-body">
+                <h4 class="card-title pb-3 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">Members</h4>
+
+                <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 750px">
+                     @foreach (ASPace.Models.GroupMember mem in Model.GroupMembers){
+                        <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
+                            <div class="d-flex flex-row justify-content-between">
+                                <p><i class="bi bi-person-circle"></i>&nbsp;<a class="text-decoration-none username-link" href="/Users/Show/@mem.User.UserName">@mem.User.UserName</a><p>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card card-blue2">
+            <div class="card-body">
+                <h5 class="card-title pb-3 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">Requests</h5>
+                <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 750px">
+                    @foreach (ASPace.Models.GroupRequest gr in Model.GroupRequests){
+                        cntRequests ++;
+                        <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
+                            <div class="d-flex flex-row justify-content-between">
+                                <p><i class="bi bi-person-circle"></i>&nbsp;<a class="text-decoration-none username-link" href="/Users/Show/@gr.Sender.UserName">@gr.Sender.UserName</a><p>
+                                <div class="d-flex flex-row justify-content-end">
+                                    @using (Html.BeginForm(actionName: "Delete", controllerName: "GroupRequests", method: FormMethod.Post, routeValues: new { SenderId = gr.SenderId, GroupId = gr.ReceiverId })){
+                                        <button class="bi bi-trash pull-right me-2 background-color-cream3" style="border: none;" type="submit"></button>
+                                    }
+                                    @using (Html.BeginForm(actionName: "Accept", controllerName: "GroupRequests", method: FormMethod.Post, routeValues: new { SenderId = gr.SenderId, GroupId = gr.ReceiverId })){
+                                        <button class="bi bi-check pull-right background-color-cream3" style="border: none;" type="submit"></button>
+                                    }
+                                </div>
+                            </div>
+                        </li>
+                    }
+                </ul>
+                @if(cntRequests == 0){
+                    <p class="text-muted mb-2"><em>You haven't any pending requests</em></p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+
+

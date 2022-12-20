@@ -1,8 +1,38 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    string welcomeMessage = $"Welcome{(ViewBag.user != null ? ", " : null)}{ViewBag.user}!";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h3 class="display-4"><strong>@welcomeMessage</strong></h3>
+</div>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <a href="/Posts/Index/" class="text-decoration-none login-link">
+            <figure style="text-align: center;">
+                <img src="/images/1.jpg" class="img-thumbnail p-0" />
+                <figcaption class="pt-2">View Posts</figcaption>
+            </figure>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/Groups/Index/" class="text-decoration-none login-link">
+            <figure style="text-align: center; ">
+                <img src="/images/3.jpg" class="img-thumbnail p-0" />
+                <figcaption class="pt-2">View Groups </figcaption>
+            </figure>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a href="/Users/Index/" class="text-decoration-none login-link">
+            <figure style="text-align: center; ">
+                <img src="/images/2.jpg" class="img-thumbnail p-0" />
+                <figcaption class="pt-2"> View Users </figcaption>
+            </figure>
+        </a>
+    </div>
 </div>

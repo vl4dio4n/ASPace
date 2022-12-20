@@ -10,53 +10,96 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Hosting;
 
 namespace ASPace.Controllers
 {
     public class PostsController : Controller
     {
         private readonly ApplicationDbContext db;
-        public PostsController(ApplicationDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        public PostsController(
+            ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager
+        )
         {
             db = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
-        // GET: /<controller>/
-        public IActionResult Index()
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult Index()
         {
-            string CurrUserId = "1";
+            string CurrUserId = _userManager.GetUserId(User);
+            List<int>? myGroups = (from gr in db.GroupMembers
+                            where gr.UserId == CurrUserId
+                            select gr.GroupId).ToList();
 
-            var posts = db.Posts.Where(u => (u.UserId == CurrUserId)).OrderByDescending(a => a.Date);
+            List<string>? myFriends = (from fr in db.Friendships
+                             where fr.FirstId == CurrUserId
+                             select fr.SecondId).ToList();
 
-            ViewBag.SearchString = "1";
+
+            IQueryable<Post>? posts = db.Posts.Where(u => (u.UserId == CurrUserId ||
+                                        (u.GroupId != null && myGroups.Contains((int)u.GroupId)) ||
+                                        (u.GroupId == null && myFriends.Contains(u.UserId))))
+                                .OrderByDescending(a => a.Date)
+                                .Include("User").Include("Group");
+
+            // Search trebuie de implementat
+            var search = "ceva";
+            
+            // Search through titles and contents of a post
+            List<int> postsIds = db.Posts.Where(
+                post => post.Title.Contains(search)
+                || post.Content.Contains(search)
+                ).Select(p => p.PostId).ToList();
+
+            posts = posts.Where(post => postsIds.Contains(post.PostId)).OrderByDescending(a => a.Date).Include("User"); ;
+
+            ViewBag.SearchString = "ceva";
             ViewBag.Posts = posts;
+
             return View();
         }
 
-
-        public IActionResult Show(int id)
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult Show(int id)
         {
-            Post post = db.Posts.Include("Comments").Where(post => post.PostId == id).First();
-            ViewBag.CurrentUser = new Tuple<string, bool>("1", post.UserId == "1");
-            ViewBag.IsLikedByUser = db.PostLikes.Find(id, "1") != null;
+            Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
+                .Include("PostLikes").Include("Comments").Include("Group").First();
+            if (post == null)
+            {
+                TempData["message"] = "The post doesn't exist!";
+                return RedirectToAction("Index");
+            }
+            ViewBag.CurrentUser = new Tuple<string, bool>(_userManager.GetUserId(User), post.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"));
 
+            ViewBag.IsLikedByUser = db.PostLikes.Find(id, _userManager.GetUserId(User)) != null;
             return View(post);
 
         }
 
-        public IActionResult New()
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult New()
         {
             Post post = new Post();
-            post.UserId = "1";
-            var curr = "1";
+            post.UserId = _userManager.GetUserId(User);
+            var curr = _userManager.GetUserId(User);
             ViewBag.Curr = curr;
 
             return View(post);
         }
 
         [HttpPost]
-        public IActionResult New(Post post)
-         {
-            post.UserId = "1";
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult New([FromForm] Post post)
+        {
+            post.UserId = _userManager.GetUserId(User);
             post.Date = DateTime.Now;
             try
             {
@@ -65,6 +108,12 @@ namespace ASPace.Controllers
                     db.Posts.Add(post);
                     db.SaveChanges();
                     TempData["message"] = "Your post has been added!";
+                    /*if (post.GroupId != null)
+                    {
+                        return RedirectToAction("Show", "Groups", new { id = post.GroupId });
+                        // return Redirect($"/Groups/Show/{post.GroupId}");
+                    }
+                    return RedirectToAction("Index")*/
                     return RedirectToAction((string)TempData["action"], (string)TempData["controller"], new { id = TempData["id"] });
                 }
                 else
@@ -78,27 +127,60 @@ namespace ASPace.Controllers
             }
         }
 
+        [Authorize(Roles = "User,Admin")]
         public ActionResult Edit(int id)
         {
 
-            Post post = db.Posts.Find(id);
-            return View(post);
-           
+            Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
+                .Include("PostLikes").Include("Comments").Include("Group").First();
+            if (post == null)
+            {
+                TempData["message"] = "The post doesn't exist!";
+                return RedirectToAction("Index");
+            }
+            if (post.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            {
+                return View(post);
+            }
+            else
+            {
+                TempData["message"] = "You don't have enough permissions to modify this post!";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
+        [Authorize(Roles = "User,Admin")]
         public ActionResult Edit(int id, Post requestPost)
         {
-            Post post = db.Posts.Find(id);
-
             try
             {
-                post.Title = requestPost.Title;
-                post.Content = requestPost.Content;
-                post.Date = DateTime.Now;
-                db.SaveChanges();
-                TempData["message"] = "The post has been successfully changed!";
-                return RedirectToAction("Index");
+                Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
+                    .Include("Comments").Include("PostLikes")
+                    .First();
+                if (post == null)
+                {
+                    TempData["message"] = "The post doesn't exist!";
+                    return RedirectToAction("Index");
+                }
+                if (post.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+                {
+                    
+                    post.Title = requestPost.Title;
+                    post.Content = requestPost.Content;
+                    post.Date = requestPost.Date;
+                    db.SaveChanges();
+                    TempData["message"] = "The post has been successfully changed! ||"+id +"||" +requestPost.
+                        PostId;
+                    return RedirectToAction("Show", new { id = post.PostId });
+
+                }
+                else
+                {
+                    TempData["message"] = "You don't have enough permissions to modify this post!";
+                    return RedirectToAction("Index");
+                }
+                
             }
             catch (Exception e)
             {
@@ -106,15 +188,37 @@ namespace ASPace.Controllers
             }
         }
 
-
         [HttpPost]
-        public IActionResult Delete(int id)
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult Delete(int id)
         {
-            Post post = db.Posts.Find(id);
-            db.Posts.Remove(post);
-            db.SaveChanges();
-            TempData["message"] = "The post was deleted";
-            return RedirectToAction("Index");
+            Post? post = db.Posts.Where(m => m.PostId == id).Include("User").First();
+            if (post == null)
+            {
+                TempData["message"] = "The post doesn't exist!";
+                return RedirectToAction("Index");
+            }
+            if (post.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            {
+                if (post.UserId != _userManager.GetUserId(User) && (User.IsInRole("Admin")))
+                {
+
+                    string subject = "Your post has been deleted.";
+                    string body = "Hello, " + post.User.UserName + " ! <br /> Unfortunately, your post " + post.Title + " was deleted by our Admin: " + _userManager.GetUserName(User) + "<br /> :(";
+
+                    // send email
+                }
+                db.Posts.Remove(post);
+                db.SaveChanges();
+                TempData["message"] = "The post was deleted";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                TempData["message"] = "You don't have enough permissions to modify this post!";
+                return RedirectToAction("Index");
+            }
+
         }
     }
 

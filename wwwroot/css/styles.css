@@ -1,0 +1,146 @@
+.background-color-blue2{
+    background-color: var(--blue2);
+}
+
+.background-color-blue3{
+    background-color: var(--blue3);
+}
+
+.background-color-blue4{
+    background-color: var(--blue4);
+}
+
+.background-color-blue5{
+    background-color: var(--blue5);
+}
+
+.background-color-cream3{
+    background-color: var(--cream3);
+}
+
+
+button:hover,
+a.background-color-cream3:hover{
+    background-color: var(--cream2);
+    color: var(--blue5);
+}
+
+.chat-button:hover{
+    background-color: var(--cream1);
+    color: var(--blue5);
+}
+
+.button-modal{
+    background-color: var(--blue2);
+}
+
+.button-modal:hover{
+    background-color: var(--blue1);
+}
+
+a.nav-link:hover,
+a.navbar-brand:hover
+{
+    color: var(--cream3) !important;
+}
+
+.nav-button:hover{
+    background-color: var(--cream2);
+}
+
+.login-link{
+    color: var(--blue5);
+    text-decoration: none;
+}
+
+.card-border{
+    border-radius: 10px;
+    border: 3px solid var(--blue5);
+    overflow: hidden;
+}
+
+.dropdown-menu{
+    background-color: var(--cream2);
+}
+
+
+/*################################### Chat Styles #######################################################*/
+
+.chat-container{
+    background-color: rgba(254, 226, 197, 0.7);
+    padding: 20px;
+}
+
+.chat-background{
+    background-image: url("../images/chat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.chat-message{
+    max-width: 75%;
+    border: 2px solid var(--cream3);
+    background-color: rgba(253, 240, 224, 0.8);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.chat-contacts-card{
+    background-color: rgba(253, 240, 224, 0.8);
+    border: 3px solid var(--cream3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.username-link{
+    color: black;
+}
+
+.username-link:hover{
+    color: var(--blue3);
+}
+
+/*################################### User profile styles #################################*/
+
+.card-blue2{
+    background-color: var(--blue2);
+    border: 3px solid var(--blue5);
+}
+
+.userslist-item-hover:hover{
+    background-color: var(--blue1);
+}
+
+.modal-list-item-hover:hover{
+    background-color: var(--cream2);
+}
+
+.search-user-modal{
+    background-color: var(--cream3);
+    border: 3px solid var(--blue3);
+}
+
+/*################################### Error view styles #################################*/
+
+.background-error-404{
+    height: 500px;
+    background-image: url("../images/404.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.background-error-403{
+    height: 700px;
+    background-image: url("../images/403.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.background-error-layer{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 181, 255, 0.45);
+}

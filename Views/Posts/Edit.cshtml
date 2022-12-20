@@ -20,6 +20,12 @@
             @Html.ValidationMessage("Content", null, new { @class = "text-danger" })
             <br />
             @Html.HiddenFor(m => m.Date)
+            @Html.HiddenFor(m => m.UserId)
+            @Html.HiddenFor(m => m.PostId)
+            @Html.HiddenFor(m => m.GroupId)
+
+
+
 
 
             <button class="btn btn-sm btn-success" type="submit">Edit Post</button>

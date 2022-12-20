@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 
 namespace ArticlesApp.Controllers{
-    [Authorize]
+
     public class UsersController : Controller{
         private readonly ApplicationDbContext db;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -100,8 +100,17 @@ namespace ArticlesApp.Controllers{
             ViewBag.Friends = GetUserFriends(user.Id).ToArray();
             ViewBag.MyFriends = GetUserFriends(_userManager.GetUserId(User)).ToArray();
             ViewBag.MyRequests = GetUserRequests(_userManager.GetUserId(User)).ToArray();
+            ViewBag.Groups = GetUserGroups(user.Id).ToArray();
         }
 
+        private IEnumerable<Group> GetUserGroups(string id){
+            IEnumerable<Group> groups = (from gm in db.GroupMembers
+                            join g in db.Groups on gm.GroupId equals g.Id
+                            where gm.UserId == id
+                            select g);
+            return groups;
+        }
+        
         private IEnumerable<UserFriend> GetUserFriends(string id){
             IEnumerable<UserFriend> friends = (from friend in db.Friendships
                             join user in db.Users on friend.SecondId equals user.Id
@@ -119,32 +128,38 @@ namespace ArticlesApp.Controllers{
         private IEnumerable<UserRequest> GetUserRequests(string id){
             var requests = (from request in db.Requests
                             where request.SenderId == id
-                            select new UserRequest(request.ReceiverId));
+                            select new UserRequest(request.ReceiverId)).AsEnumerable<UserRequest>()
+                            .Union(from request in db.Requests
+                                where request.ReceiverId == id
+                                select new UserRequest(request.SenderId)
+                            );
             return requests;
         }
 
         [HttpPost]
         public JsonResult Search(string str){
             str = str.ToLower();
-            List<UserFriend> friends = GetUserFriends(_userManager.GetUserId(User)).ToList<UserFriend>();
-            List<UserRequest> requests = GetUserRequests(_userManager.GetUserId(User)).ToList<UserRequest>();
-            
+    
             List<UserInfo> users = (from user in db.Users 
                         where user.UserName.ToLower().Contains(str) 
                             || (user.FirstName + user.LastName).ToLower().Contains(str) 
                             || (user.LastName + user.FirstName).ToLower().Contains(str)
                         select new UserInfo(user.UserName, user.Id, user.FirstName, user.LastName)).ToList<UserInfo>();
 
-            foreach(UserInfo user in users){
-                user.IsFriend = friends.Any(friend => user.UserId == friend.UserId);
-                user.SentRequest = requests.Any(request => user.UserId == request.ReceiverId);
-                if(user.UserId == _userManager.GetUserId(User)){
-                    user.IsFriend = true;
-                    user.SentRequest = true;
+            if(_userManager.GetUserId(User) != null){
+                List<UserFriend> friends = GetUserFriends(_userManager.GetUserId(User)).ToList<UserFriend>();
+                List<UserRequest> requests = GetUserRequests(_userManager.GetUserId(User)).ToList<UserRequest>();
+                foreach(UserInfo user in users){
+                    user.IsFriend = friends.Any(friend => user.UserId == friend.UserId);
+                    user.SentRequest = requests.Any(request => user.UserId == request.ReceiverId);
+                    if(user.UserId == _userManager.GetUserId(User)){
+                        user.IsFriend = true;
+                        user.SentRequest = true;
+                    }
                 }
             }
 
-            return Json(users);
+            return Json(new {Users = users, IsSignedIn = (_userManager.GetUserId(User) != null)});
         }
     }
 }

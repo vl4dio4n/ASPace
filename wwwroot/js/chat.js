@@ -1,5 +1,4 @@
 "use strict";
-
 var connection = new signalR.HubConnectionBuilder().withUrl("/ASPaceHub").build();
 
 document.getElementById("sendButton").disabled = true;
@@ -17,7 +16,7 @@ connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     li.classList.add('d-flex', `justify-content-${currentUser == user ? 'end' : 'start'}`, 'mb-4');
     li.innerHTML = `
-        <div class="card" style="max-width: 75%;">
+        <div class="card chat-message">
             <div class="card-header d-flex justify-content-between p-3">
                 <p class="fw-bold mb-0">${user} &nbsp;&nbsp;</p>
                 <p class="text-muted small mb-0"><i class="far fa-clock"></i>${getTime()}</p>

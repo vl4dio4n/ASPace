@@ -1,0 +1,43 @@
+@model ASPace.Models.Group
+@{
+    ViewBag.Title = "Create New Group";
+}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <div class="card card-blue2">
+            <div class="card-body">
+                <h3 class="card-title text-center">Create a new Group!</h3>
+                @using (Html.BeginForm(actionName: "New", controllerName: "Groups"))
+                {
+                    <div class="form px-3">
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        <strong>@Html.Label("Title", "Group Title", new { @class = "form-label" })</strong>
+                        <br />
+                        @Html.TextBox("Title", "", new { @class = "form-control", @placeholder="Title" })
+                        @Html.ValidationMessage("Title", null, new { @class = "text-danger" })
+                        <br />
+                        <strong>@Html.Label("Description", "Group Description:", new { @class = "form-label" })</strong>
+                        <br />
+                        @Html.TextArea("Description", "", new { @class = "form-control", @rows = 5, @placeholder="Description" })
+                        @Html.ValidationMessage("Description", null, new { @class = "text-danger" })
+                        <br />
+                        <strong>@Html.Label("IsPrivate", "Make private:")</strong>
+                        @Html.CheckBox("IsPrivate", false)
+                        <br />
+                        @Html.HiddenFor(m => m.Date)
+                        @Html.HiddenFor(m => m.Id)
+
+                        <div class="d-flex flex-direction-row justify-content-center">
+                            <button class="btn background-color-cream3" type="submit">Add Group</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+

@@ -3,12 +3,35 @@
 @{
     ViewBag.Title = "Show";
 }
+@if (TempData["message"] == "The post has been successfully changed!")
+{
+    <div class="alert alert-success" role="alert" style="text-align:center; margin-top:20px;">
+        @TempData["message"]
+    </div>
+}
+else if (TempData["message"] == "You don't have enough permissions to modify this post!")
+{
+    <div class="alert alert-danger" role="alert" style="text-align:center; margin-top:20px;">
+        @TempData["message"]
+    </div>
+}
 
 <br />
 <div class="row">
     <div class="col-md-4">
-        @Html.ActionLink(" Go to posts", "Index", new { controller = "Posts" }, new { @class = "btn btn-warning btn-block bi bi-arrow-left" })
+        @if (Model.GroupId != null)
+        {
+            @Html.ActionLink("Back to Group", "Show", "Groups", new { id = Model.GroupId }, new { @class = "btn btn-info btn-block" });
+        }
     </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Go to posts", "Index", new { controller = "Posts" }, new { @class = "btn btn-warning btn-block" })
+    </div>
+    <div class="col-md-4">
+        @{ string text = "Go to " + Model.User.UserName + "'s page ";}
+        @Html.ActionLink(text, "Show", "Users", new { id = Model.UserId }, new { @class = "btn btn-info btn-block" })
+    </div>
+
 </div>
 
 <br />
@@ -29,7 +52,8 @@
                     @Html.Hidden("PostId", Model.PostId)
                     @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
                     <button type="submit" class="btn btn-outline-primary">
-                        <i class="bi bi-hand-thumbs-up"></i> Like post  </button>
+                        <i class="bi bi-hand-thumbs-up"></i> Like post
+                    </button>
                     @Html.Partial("PartialPostLike")
 
                 }
@@ -39,7 +63,8 @@
                 using (Html.BeginForm(actionName: "Delete", controllerName: "PostLikes", method: FormMethod.Post, routeValues: new { PostId = Model.PostId, UserId = (string)ViewBag.CurrentUser.Item1 }))
                 {
                     <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-hand-thumbs-up"></i>  Like post  </button>
+                        <i class="bi bi-hand-thumbs-up"></i>  Like post
+                    </button>
                     @Html.Partial("PartialPostLike")
 
                 }
@@ -74,7 +99,7 @@
         <div class="col-md-3"></div>
         <br />
     </div>
-    </div>
+</div>
 
 
 @*comments*@
@@ -107,8 +132,10 @@
     </div>
     <div class="col-md-2"></div>
 </div>
-
-@foreach (ASPace.Models.Comment comm in Model.Comments)
+@if (Model.Comments != null)
 {
-    @Html.Partial("PartialComment", comm);
+    @foreach (ASPace.Models.Comment comm in Model.Comments)
+    {
+        @Html.Partial("PartialComment", comm);
+    }
 }

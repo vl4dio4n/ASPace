@@ -199,6 +199,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnJpZW5kUmVxdWVzdHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/GroupMembers/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR3JvdXBNZW1iZXJzL1Nob3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Groups/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR3JvdXBzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Groups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR3JvdXBzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Groups/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR3JvdXBzL05ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Groups/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR3JvdXBzL1Nob3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Groups/Status.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR3JvdXBzL1N0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -237,6 +261,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Shared/PartialCommentLike.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxDb21tZW50TGlrZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Shared/PartialGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxHcm91cC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Shared/PartialPost.cshtml]

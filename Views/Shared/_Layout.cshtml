@@ -7,14 +7,16 @@
     
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/variables.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ASPace.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm background-color-blue5 border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ASPace</a>
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">ASPace</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,9 +27,18 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Posts" asp-action="Index">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Groups" asp-action="Index">Groups</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                        </li>
+                        <li class="nav-item">
                             <form class="d-flex">
                                 <input class="form-control ms-3 me-2" type="search" placeholder="Search User" aria-label="Search" id="searchUserInput">
-                                <button class="btn btn-outline-light" type="button"><i class="bi bi-search" id="searchUserButton"></i></button>
+                                <button class="btn btn-outline-light nav-button" type="button"><i class="bi bi-search" id="searchUserButton"></i></button>
                             </form>
                         </li>
                     </ul>
@@ -36,30 +47,33 @@
             </div>
         </nav>
     </header>
-    <div class="container pt-5">
+
+    
+    <div class="container pt-5" style="height: 100%;">
         <main role="main" class="pb-3 pt-5">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+
+    <footer class="border-top footer text-muted background-color-blue5">
         <div class="container">
-            &copy; 2022 - ASPace - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - ASPace @* - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
         </div>
     </footer>
 
     <div class="modal fade" id="searchUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content search-user-modal">
                 <div class="modal-header">
                     <form class="d-flex">
                         <input class="form-control ms-3 me-2" type="search" placeholder="Search User" aria-label="Search" id="searchUserInputModal">
-                        <button class="btn btn-outline-dark" type="button"><i class="bi bi-search" id="searchUserButtonModal"></i></button>
+                        <button class="btn button-modal background-color-blue1" type="button"><i class="bi bi-search" id="searchUserButtonModal"></i></button>
                     </form>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="card border-0 mb-3">
+                    <div class="card border-0 mb-3 background-color-cream3">
                         <div class="card-body overflow-auto" style="max-height: 400px">
                             <ul class="list-unstyled mb-0" id="searchUsersList"></ul>
                         </div>

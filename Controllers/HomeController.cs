@@ -1,20 +1,27 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ASPace.Models;
+using ASPace.Areas.Identity.Data;
+using ASPace.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace ASPace.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(
+        UserManager<ApplicationUser> userManager
+    )
     {
-        _logger = logger;
+        _userManager = userManager;
     }
 
     public IActionResult Index()
     {
+        ViewBag.user = _userManager.GetUserName(User);
         return View();
     }
 

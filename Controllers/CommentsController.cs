@@ -10,37 +10,58 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace ASPace.Controllers
 {
     public class CommentsController : Controller
     {
         private readonly ApplicationDbContext db;
-        public CommentsController(ApplicationDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        public CommentsController(
+            ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager
+        )
         {
             db = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
 
-        public ActionResult Index()
+
+        // GET: Comments
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Index()
         {
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Delete(int id)
-        {
-            Comment comm = db.Comments.Find(id);
-            db.Comments.Remove(comm);
-            db.SaveChanges();
-            return Redirect("/Posts/Show/" + comm.PostId);
-        }
+        //[HttpPost]
+        //[Authorize(Roles = "User,Admin")]
+        //public IActionResult Delete(int id)
+        //{
+        //    Comment? comm = db.Comments.Where(m => m.CommentId == id).Include("Post").First();
+        //    if (comm == null)
+        //    {
+        //        TempData["message"] = "The comment doesn't exist!";
+        //        return RedirectToAction("Index");
+        //    }
+        //    db.Comments.Remove(comm);
+        //    db.SaveChanges();
+        //    return Redirect("/Posts/Show/" + comm.PostId);
+        //}
+
+        
 
         [HttpPost]
-        public ActionResult New(Comment comm)
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult New(Comment comm)
         {
             comm.Date = DateTime.Now;
-            // userId curent
-            comm.UserId = "1";
+            comm.UserId = _userManager.GetUserId(User);
             try
             {
                 db.Comments.Add(comm);
@@ -54,38 +75,60 @@ namespace ASPace.Controllers
             }
 
         }
-
-        public ActionResult Edit(int id)
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Edit(int id)
         {
-            Comment comm = db.Comments.Where(c => c.CommentId == id).First();
-            // user curent sau admin
-            if (comm.UserId == "1")
+            Comment comm = db.Comments.Where(m => m.CommentId == id)
+                .Include("Post").Include("User").Include("CommentLikes").First();
+            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
                 return View(comm);
             }
             else
             {
-                TempData["message"] = "You don't have permissions to modify this comment!";
+                TempData["message"] = "You don't have enough permissions to modify this article!";
                 return Redirect("/Posts/Show/" + comm.PostId);
             }
         }
 
         [HttpPost]
-        public ActionResult Edit(int id, Comment requestComment)
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Edit(int id, Comment requestComment)
         {
             try
             {
-                Comment comm = db.Comments.Where(c => c.CommentId == id).First();
-                comm.Content = requestComment.Content;
-                comm.Date = DateTime.Now;
-                db.SaveChanges();
-                TempData["message"] = "The comment has been changed successfully!";
-                return Redirect("/Posts/Show/" + comm.PostId);
+                
+                Comment comm = db.Comments.Where(m => m.CommentId == id)
+                                .Include("Post").Include("User").Include("CommentLikes").First();
+                if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+                {
+                    
+                        comm.Content = requestComment.Content;
+                        comm.Date = requestComment.Date;
+                        TempData["message"] = "The comment has been successfully changed!";
+                        db.SaveChanges();
+                        return Redirect("/Posts/Show/" + comm.PostId);
+                }
+                else
+                {
+                    TempData["message"] = "You don't have enough permissions to modify this comment!";
+                    return RedirectToAction("Index");
+                }
+               
             }
             catch (Exception e)
             {
-                return View("Edit", requestComment);
+                return View(requestComment);
             }
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            Comment comm = db.Comments.Find(id);
+            db.Comments.Remove(comm);
+            db.SaveChanges();
+            return Redirect("/Posts/Show/" + comm.PostId);
         }
     }
 }

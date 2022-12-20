@@ -1,11 +1,11 @@
 <h5 class="font-weight-bold mb-3 text-center text-lg-start">Chats</h5>
 
-<div class="card">
-    <div class="card-body overflow-auto" style="max-height: 650px">
+<div class="card chat-contacts-card">
+    <div class="card-body overflow-auto" style="max-height: 600px">
         <ul class="list-unstyled mb-0">
             @foreach(var friendInfo in ViewBag.FriendsInfo){
-                <li class="p-2 border-bottom">
-                    <a href="/Chats/Show?FirstUser=@ViewBag.FirstUser&SecondUser=@friendInfo.UserName" class="d-flex justify-content-between" style="text-decoration: none;">
+                <li class="p-2 border-bottom" style="border-bottom-color: var(--cream3) !important;">
+                    <a href="/Chats/Show?FirstUser=@ViewBag.FirstUser&SecondUser=@friendInfo.UserName" class="d-flex justify-content-between username-link" style="text-decoration: none;">
                         <div class="d-flex flex-row">
                             <div class="pt-1">
                                 <p class="fw-bold mb-0">@friendInfo.UserName</p>

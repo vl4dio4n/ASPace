@@ -17,61 +17,66 @@
     </div>
 }
 
-@if(ViewBag.Requests.Length == 0){
-    <h2 class="mb-5">You haven't any pending friend requests</h2>
-} else {
-    <h2 class="mb-5">You have @ViewBag.Requests.Length friend request(s)</h2>
-}
 
-
-@for(int i = 0; i < ViewBag.Requests.Length; i = i + 3){
-    <div class="row mb-4">
-    @for(int j = i; j < Math.Min(ViewBag.Requests.Length, i + 3); j ++){
-        var request = ViewBag.Requests[j];
-        <div class="col-4">
-            <div class="card">
-                <div class="card-header d-flex flex-row justify-content-between">
-                    <h5><a class="text-dark text-decoration-none" href="/Users/Show/@request.UserName">@request.UserName</a></h5>
-                    <small>@request.RequestDate</small>
-                </div>
-                <div class="card-body d-flex flex-row justify-content-between">
-                    <form method="post" action="/Friendships/New/@request.UserId">
-                        <button class="btn btn-outline-dark">Accept</button>
-                    </form>
-                    <form method="post" action="/FriendRequests/Delete/@request.UserId">
-                        <button class="btn btn-outline-dark">Reject</button>
-                    </form>
-                </div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <div class="card card-blue2">
+            <div class="card-body">
+                <h5 class="card-title pb-3 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">Received Friend Requests</h5>
+                @if(ViewBag.Requests.Length == 0){
+                    <p class="text-muted mb-2"><em>You haven't any pending friend requests received</em></p>
+                } else {
+                    <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 750px">
+                        @for(int i = 0; i < ViewBag.Requests.Length; i ++){
+                            var request = ViewBag.Requests[i];
+                            <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <p><a class="text-decoration-none username-link" href="/Users/Show/@request.UserName">@request.UserName</a><p>
+                                    <small class="text-muted">@request.RequestDate</small>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between">
+                                    <form method="post" action="/Friendships/New/@request.UserId">
+                                        <button class="btn btn-sm background-color-cream3">Accept</button>
+                                    </form>
+                                    <form method="post" action="/FriendRequests/Delete/@request.UserId">
+                                        <button class="btn btn-sm background-color-cream3">Reject</button>
+                                    </form>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
             </div>
         </div>
-    }
     </div>
-}
 
-@if(ViewBag.MyRequests.Length == 0){
-    <h2 class="mt-5 mb-5">You haven't any friend requests sent waiting to be accepted</h2>
-} else {
-    <h2 class="mt-5 mb-5">You have @ViewBag.MyRequests.Length friend request(s) sent waiting to be accepted</h2>
-}
-
-
-@for(int i = 0; i < ViewBag.MyRequests.Length; i = i + 3){
-    <div class="row mb-4">
-    @for(int j = i; j < Math.Min(ViewBag.MyRequests.Length, i + 3); j ++){
-        var request = ViewBag.MyRequests[j];
-        <div class="col-4">
-            <div class="card">
-                <div class="card-header d-flex flex-row justify-content-between">
-                    <h5><a class="text-dark text-decoration-none" href="/Users/Show/@request.UserName">@request.UserName</a></h5>
-                    <small>@request.RequestDate</small>
-                </div>
-                <div class="card-body d-flex flex-row justify-content-between">
-                    <form method="post" action="/FriendRequests/Cancel/@request.UserId">
-                        <button class="btn btn-outline-dark">Cancel</button>
-                    </form>
-                </div>
+    <div class="col-md-4">
+        <div class="card card-blue2">
+            <div class="card-body">
+                <h5 class="card-title pb-3 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">Sent Friend Requests</h5>
+                @if(ViewBag.MyRequests.Length == 0){
+                    <p class="text-muted mb-2"><em>You haven't any pending friend requests sent</em></p>
+                } else {
+                    <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 750px">
+                        @for(int i = 0; i < ViewBag.MyRequests.Length; i ++){
+                            var request = ViewBag.MyRequests[i];
+                            <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <p><a class="text-decoration-none username-link" href="/Users/Show/@request.UserName">@request.UserName</a><p>
+                                    <small class="text-muted">@request.RequestDate</small>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between">
+                                    <form method="post" action="/FriendRequests/Cancel/@request.UserId">
+                                        <button class="btn btn-sm background-color-cream3">Cancel</button>
+                                    </form>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
             </div>
         </div>
-    }
     </div>
-}
+    <div class="col-md-2"></div>
+</div>

@@ -1,0 +1,24 @@
+@model ASPace.Models.Group
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>@Model.Title members</h2>
+
+@foreach (GroupMember gm in Model.GroupMembers)
+{
+    <div style="display: inline-block; float: left; margin-right: 20px;">
+        <p>@gm.UserId</p>
+    </div>
+    if (ViewBag.CurrentUser.Item2)
+    {
+        using (Html.BeginForm(actionName: "Delete", controllerName: "GroupMembers", method: FormMethod.Post, routeValues: new { GroupId = gm.GroupId, UserId = gm.UserId }))
+        {
+            TempData["ReturnTo"] = "GroupMembers";
+            <div style="display: inline-block; margin-right: 20px">
+                <button class="glyphicon glyphicon-trash" style="border: none; background: transparent;" type="submit"></button>
+            </div>
+            <hr />
+        }
+    }
+}

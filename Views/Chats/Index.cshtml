@@ -1,11 +1,15 @@
 @{
   ViewBag.Title = "Chat";
 }
-<section style="background-color: transparent;">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
-                @Html.Partial("PartialChat")
+<section class="card-border background-color-blue2">
+    <div class="container py-5" style="padding: 24px;">
+        <div class="chat-background">
+            <div class="container chat-container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+                        @Html.Partial("PartialChat")
+                    </div>
+                </div>
             </div>
         </div>
     </div>

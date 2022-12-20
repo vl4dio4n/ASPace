@@ -1,0 +1,133 @@
+@model ASPace.Models.Group
+@{
+    List<GroupMember> Members = ViewBag.Members;
+    ViewBag.Title = Model.Title;
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="container" style="margin-bottom: 100px;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-blue2 mb-4">
+                        <img src="/images/4.jpeg" width="100%;" alt="poza grup" style="border: 2px solid var(--blue5);" />
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">@Model.Title</h5>
+                            <p class="card-subtitle"><strong>Creator:&nbsp;</strong><a href="/Users/Show/@Model.Creator.UserName" class="text-decoration-none username-link"><i class="bi bi-person-circle"></i>@Model.Creator.UserName</a></p>
+                            <div class="mt-2 mb-2"><strong>Description:</strong>&nbsp;@Model.Description</div>
+                            @*creator*@
+                            @if (ViewBag.CurrentUser.Item1 == Model.CreatorId){
+                                using (Html.BeginForm(actionName: "Edit", controllerName: "Groups", routeValues: new { id = Model.Id }, method: FormMethod.Get, null, htmlAttributes: new { @style = "display: inline" })){
+                                    <button class="btn btn-sm background-color-cream3 me-1" type="submit">Edit Group</button>
+                                }
+                                <a class="btn btn-sm background-color-cream3 me-1" href="/Groups/Status/@Model.Id">Group Relations</a>
+                            }
+                            @*creator sau admin*@
+                            @if (ViewBag.CurrentUser.Item2){
+                                using (Html.BeginForm(actionName: "Delete", controllerName: "Groups", routeValues: new { id = Model.Id }, method: FormMethod.Post, null, htmlAttributes: new { @style = "display: inline" })){
+                                    <button class="btn btn-sm background-color-cream3" type="submit">Delete Group</button>
+                                }
+                            }
+
+                            @* nu e membru*@
+                            @if (!ViewBag.IsMember){
+                                @* public*@
+                                if (!@Model.IsPrivate){
+                                    using (Html.BeginForm(actionName: "New", controllerName: "GroupMembers", method: FormMethod.Post, htmlAttributes: new { @style = "display: inline" })){
+                                        @Html.Hidden("GroupId", (int)Model.Id)
+                                        @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
+                                        @Html.Hidden("Function", (string)"basic")
+                                        <button type="submit" class="btn btn-sm background-color-cream3">Join Group</button>
+                                    }
+                                }
+                                @* privat*@
+                                else{
+                                    @* a trimis cerere*@
+                                    if (ViewBag.SentRequest){
+                                        using (Html.BeginForm(actionName: "Delete", controllerName: "GroupRequests", routeValues: new { SenderId = (string)ViewBag.CurrentUser.Item1, GroupId = (int)Model.Id }, method: FormMethod.Post, null, htmlAttributes: new { @style = "display: inline" })){
+                                            <button type="submit" class="btn btn-sm background-color-cream3">Cancel Request</button>
+                                        }
+                                    }
+                                    @*nu a trimis cerere*@
+                                    else{
+                                        using (Html.BeginForm(actionName: "New", controllerName: "GroupRequests", method: FormMethod.Post, htmlAttributes: new { @style = "display: inline" })){
+                                            @Html.Hidden("ReceiverId", (int)Model.Id)
+                                            @Html.Hidden("SenderId", (string)ViewBag.CurrentUser.Item1)
+                                            <button type="submit" class="btn btn-sm background-color-cream3">Send Request</button>
+                                        }
+                                    }
+                                }
+                            }
+                            @* e membru, dar nu e creator*@
+                            else if (ViewBag.CurrentUser.Item1 != Model.CreatorId){
+                                using (Html.BeginForm(actionName: "Delete", controllerName: "GroupMembers", routeValues: new { GroupId = Model.Id, UserId = (string)ViewBag.CurrentUser.Item1 }, method: FormMethod.Post, null, htmlAttributes: new { @style = "display: inline" })){
+                                    TempData["ReturnTo"] = "Groups";
+                                    <button type="submit" class="btn btn-sm background-color-cream3">Leave Group</button>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-blue2 mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Members</h5>
+                            <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 400px">
+                                @for (var i = 0; i < Members.Count(); i++){
+                                    <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
+                                        <a href="/Users/Show/@Members[i].User.UserName" class="text-decoration-none username-link"><i class="bi bi-person-circle"></i> @Members[i].User.UserName</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="container" style="margin-bottom: 100px;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-blue2 mb-4">
+                        <div class="card-body">
+                            @using (Html.BeginForm(actionName: "New", controllerName: "Posts")){
+                                <h5 class="card-title pb-2 mb-2 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">Share your thoughts with the group!</h5>
+                                <div class="form">
+                                    <strong> @Html.Label("Title", "Title:", new {@class = "form-label"})</strong>
+                                    @Html.TextBox("Title", "", new { @class = "form-control", @placeholder="Title"})
+                                    @Html.ValidationMessage("Title", null, new { @class = "text-danger"})
+                                    <br />
+                                    <strong>@Html.Label("Content", "Post's Content:", new {@class = "form-label"})</strong>
+                                    <br />
+                                    @Html.TextArea("Content", null, new { @class = "form-control", @rows=3, @placeholder="Comment"})
+                                    @Html.ValidationMessage("Content", null, new { @class = "text-danger" })
+                                    <br />
+                                    @Html.Hidden("GroupId", Model.Id)
+                                    @{
+                                        TempData["action"] = "Show";
+                                        TempData["controller"] = "Groups";
+                                        TempData["id"] = (int)Model.Id;
+                                    }
+                                    <button class="btn btn-sm background-color-cream3" type="submit">Add Post</button>
+                                </div>
+                            }
+                        </div>
+                    <div>
+                </div>
+            </div>
+            <@Model.Posts>
+            @foreach (ASPace.Models.Post post in Model.Posts.OrderByDescending(m => m.Date)){
+                <div class="row">
+                    <div class="col-12">
+                        @Html.Partial("PartialPost", post)
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

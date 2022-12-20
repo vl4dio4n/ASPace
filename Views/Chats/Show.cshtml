@@ -2,68 +2,68 @@
   ViewBag.Title = "Chat";
   bool ok = false;
 }
-<section style="background-color: transparent;">
-  <div class="container py-5">
-
-    <div class="row">
-
-      <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
-        @Html.Partial("PartialChat")
-      </div>
-      
-      <div class="col-md-6 col-lg-7 col-xl-8">
-
-        <ul class="list-unstyled overflow-auto" id="messagesList" style="max-height: 550px">
-          @foreach(var message in @ViewBag.Messages){
-            @if(!ok && !message.Seen && message.ReceiverId == ViewBag.CurrentUserId){
-              ok = true;
-              <li class="mb-4 border-bottom border-3" id="bookmark">
-                <p class="text-center mb-0">@ViewBag.unreadMessages Unread Messages</p>
-              </li>
-            }
-            @if(@message.SenderId == ViewBag.CurrentUserId){
-              <li class="d-flex justify-content-end mb-4">
-                <div class="card" style="max-width: 75%;">
-                  <div class="card-header d-flex justify-content-between p-3">
-                    <p class="fw-bold mb-0">@ViewBag.FirstUser &nbsp;&nbsp;</p>
-                    <p class="text-muted small mb-0"><i class="far fa-clock"></i>@message.Time</p>
-                  </div>
-                  <div class="card-body">
-                    <p class="mb-0">@message.Message</p>
-                  </div>
-                </div>
-              </li>
-            } else {
-              <li class="d-flex justify-content-start mb-4">
-                <div class="card" style="max-width: 75%;">
-                  <div class="card-header d-flex justify-content-between p-3">
-                    <p class="fw-bold mb-0">@ViewBag.SecondUser &nbsp;&nbsp;</p>
-                    <p class="text-muted small mb-0"><i class="far fa-clock"></i>@message.Time</p>
-                  </div>
-                  <div class="card-body">
-                    <p class="mb-0">@message.Message</p>
-                  </div>
-                </div>
-              </li>
-            }
-          }
+<section class="card-border background-color-blue2">
+  <div class="container py-5" style="padding: 24px;">
+    <div class="chat-background">
+      <div class="container chat-container">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+            @Html.Partial("PartialChat")
+          </div>
           
-        </ul>
-        
-        <ul class="list-unstyled">
-          <li class="bg-white mb-3">
-            <input type="hidden" id="currentUser" value="@ViewBag.FirstUser"/>
-            <input type="hidden" id="receiverInput" value="@ViewBag.SecondUser"/>
-            <div class="form-outline">
-              <textarea class="form-control" id="messageInput" rows="4" placeholder="Message"></textarea>
-            </div>
-          </li>
-          <button type="button" class="btn btn-info btn-rounded float-end" id="sendButton">Send</button>
-        </ul>
+          <div class="col-md-6 col-lg-7 col-xl-8">
+
+            <ul class="list-unstyled overflow-auto" id="messagesList" style="max-height: 500px">
+              @foreach(var message in @ViewBag.Messages){
+                @if(!ok && !message.Seen && message.ReceiverId == ViewBag.CurrentUserId){
+                  ok = true;
+                  <li class="mb-4 border-bottom border-3" id="bookmark">
+                    <p class="text-center mb-0">@ViewBag.unreadMessages Unread Messages</p>
+                  </li>
+                }
+                @if(@message.SenderId == ViewBag.CurrentUserId){
+                  <li class="d-flex justify-content-end mb-4">
+                    <div class="card chat-message">
+                      <div class="card-header d-flex justify-content-between p-3">
+                        <p class="fw-bold mb-0"><a href="/Users/Show/@ViewBag.FirstUser" class="username-link" style="text-decoration: none;">@ViewBag.FirstUser</a> &nbsp;&nbsp;</p>
+                        <p class="text-muted small mb-0"><i class="far fa-clock"></i>@message.Time</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="mb-0">@message.Message</p>
+                      </div>
+                    </div>
+                  </li>
+                } else {
+                  <li class="d-flex justify-content-start mb-4">
+                    <div class="card chat-message">
+                      <div class="card-header d-flex justify-content-between p-3">
+                        <p class="fw-bold mb-0"><a href="/Users/Show/@ViewBag.SecondUser" class="username-link" style="text-decoration: none;">@ViewBag.SecondUser</a> &nbsp;&nbsp;</p>
+                        <p class="text-muted small mb-0"><i class="far fa-clock"></i>@message.Time</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="mb-0">@message.Message</p>
+                      </div>
+                    </div>
+                  </li>
+                }
+              }
+              
+            </ul>
+            
+            <ul class="list-unstyled">
+              <li class="bg-white mb-3" style="opacity: 0.8;">
+                <input type="hidden" id="currentUser" value="@ViewBag.FirstUser"/>
+                <input type="hidden" id="receiverInput" value="@ViewBag.SecondUser"/>
+                <div class="form-outline">
+                  <textarea class="form-control" id="messageInput" rows="4" placeholder="Message"></textarea>
+                </div>
+              </li>
+              <button type="button" class="btn btn-rounded float-end background-color-cream3 chat-button" id="sendButton">Send</button>
+            </ul>
+          </div>
+        </div>
       </div>
-
     </div>
-
   </div>
 </section>
 

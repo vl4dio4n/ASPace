@@ -25,6 +25,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "User,Admin")]
         public ActionResult New(CommentLike commlike)
         {
             try
@@ -41,8 +42,9 @@ namespace ASPace.Controllers
 
         }
 
+        [Authorize(Roles = "User,Admin")]
         [HttpPost]
-        public ActionResult Delete(int CommentId, int UserId)
+        public ActionResult Delete(int CommentId, string UserId)
         {
             CommentLike ToDelete = db.CommentLikes.Find(CommentId, UserId);
             db.CommentLikes.Remove(ToDelete);
