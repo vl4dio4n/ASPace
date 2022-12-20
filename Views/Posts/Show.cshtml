@@ -29,7 +29,7 @@ else if (TempData["message"] == "You don't have enough permissions to modify thi
     </div>
     <div class="col-md-4">
         @{ string text = "Go to " + Model.User.UserName + "'s page ";}
-        @Html.ActionLink(text, "Show", "Users", new { id = Model.UserId }, new { @class = "btn btn-info btn-block" })
+        @Html.ActionLink(text, "Show", "Users", new { id = Model.User.UserName }, new { @class = "btn btn-info btn-block" })
     </div>
 
 </div>

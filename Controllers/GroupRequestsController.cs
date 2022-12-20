@@ -48,7 +48,7 @@ namespace ASPace.Controllers
     */
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New([FromForm] GroupRequest grouprequest)
         {
             try
@@ -64,7 +64,7 @@ namespace ASPace.Controllers
 
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         [HttpPost]
         public ActionResult Delete(string SenderId, int GroupId)
         {

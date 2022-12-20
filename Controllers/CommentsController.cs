@@ -33,14 +33,14 @@ namespace ASPace.Controllers
 
 
         // GET: Comments
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Index()
         {
             return View();
         }
 
         //[HttpPost]
-        //[Authorize(Roles = "User,Admin")]
+        //[Authorize(Roles = "User,Moderator,Admin")]
         //public IActionResult Delete(int id)
         //{
         //    Comment? comm = db.Comments.Where(m => m.CommentId == id).Include("Post").First();
@@ -57,7 +57,7 @@ namespace ASPace.Controllers
         
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult New(Comment comm)
         {
             comm.Date = DateTime.Now;
@@ -75,7 +75,7 @@ namespace ASPace.Controllers
             }
 
         }
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Edit(int id)
         {
             Comment comm = db.Comments.Where(m => m.CommentId == id)
@@ -92,7 +92,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Edit(int id, Comment requestComment)
         {
             try

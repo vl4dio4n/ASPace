@@ -43,7 +43,6 @@ namespace ASPace.Controllers
                 search = Convert.ToString(HttpContext.Request.Query["search"]).Trim().ToLower();
             }
 
-            //    // Search through titles and contents of a post
             List<int> groupIds = db.Groups.Where(
                 group => group.Title.ToLower().Contains(search)
                 || group.Description.ToLower().Contains(search)
@@ -56,7 +55,7 @@ namespace ASPace.Controllers
             return View();
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New()
         {
             Group group = new Group();
@@ -67,7 +66,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New([FromForm] Group group)
         {
             group.CreatorId = _userManager.GetUserId(User);
@@ -91,7 +90,7 @@ namespace ASPace.Controllers
             }
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Show(int id)
         {
             Group? group = db.Groups.Where(m => m.Id == id).Include("Posts.User").Include("Creator")
@@ -109,7 +108,7 @@ namespace ASPace.Controllers
 
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Edit(int id)
         {
             Group? group = db.Groups.Where(m => m.Id == id)
@@ -133,7 +132,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Edit(int id, Group requestGroup)
         {
             try
@@ -194,7 +193,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Delete(int id)
         {
             Group? group = db.Groups.Where(m => m.Id == id)

@@ -27,7 +27,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New(PostLike postlike)
         {
             try
@@ -44,7 +44,7 @@ namespace ASPace.Controllers
 
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         [HttpPost]
         public ActionResult Delete(int PostId, string UserId)
         {

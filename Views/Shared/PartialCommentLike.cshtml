@@ -1,31 +1,4 @@
 @model ASPace.Models.Comment;
 <span class="likedby-badge likedby-badge-light">
     @Model.LikeCount
-    @if (Model.LikeCount != 0)
-    {
-        <div class="likedby-div">
-            <h6>Liked by</h6>
-            <ul>
-                @{var idx = 0;}
-
-
-                @if (Model.CommentLikes != null)
-                {
-                    @foreach (ASPace.Models.CommentLike cl in Model.CommentLikes)
-                        {
-                            if (idx < 10)
-                            {
-                            <li><a>@cl.UserId</a></li>
-                                ++idx;
-                            }
-                            else
-                            {
-                            <li>and @(Model.LikeCount - idx)</li>
-                                break;
-                            }
-                        }
-                }
-            </ul>
-        </div>
-    }
 </span>

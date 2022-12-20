@@ -31,7 +31,7 @@ namespace ASPace.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Index()
         {
             string CurrUserId = _userManager.GetUserId(User);
@@ -50,41 +50,44 @@ namespace ASPace.Controllers
                                 .OrderByDescending(a => a.Date)
                                 .Include("User").Include("Group");
 
-            // Search trebuie de implementat
-            var search = "ceva";
+            // Search 
+            string search = "";
+
+            if (Convert.ToString(HttpContext.Request.Query["search"]) != null)
+            {
+                search = Convert.ToString(HttpContext.Request.Query["search"]).Trim().ToLower();
+            }
             
-            // Search through titles and contents of a post
             List<int> postsIds = db.Posts.Where(
-                post => post.Title.Contains(search)
-                || post.Content.Contains(search)
+                post => (post.Title.Contains(search) || post.Content.Contains(search))
+                && (CurrUserId == post.UserId)
                 ).Select(p => p.PostId).ToList();
 
-            posts = posts.Where(post => postsIds.Contains(post.PostId)).OrderByDescending(a => a.Date).Include("User"); ;
+            posts = posts.Where(post => postsIds.Contains(post.PostId)).OrderByDescending(a => a.Date).Include("User").Include("Group"); ;
 
-            ViewBag.SearchString = "ceva";
+            ViewBag.SearchString = search;
             ViewBag.Posts = posts;
 
             return View();
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Show(int id)
         {
             Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
-                .Include("PostLikes").Include("Comments").Include("Group").First();
+                .Include("PostLikes.User").Include("Comments").Include("Group").First();
             if (post == null)
             {
                 TempData["message"] = "The post doesn't exist!";
                 return RedirectToAction("Index");
             }
             ViewBag.CurrentUser = new Tuple<string, bool>(_userManager.GetUserId(User), post.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"));
-
             ViewBag.IsLikedByUser = db.PostLikes.Find(id, _userManager.GetUserId(User)) != null;
             return View(post);
 
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New()
         {
             Post post = new Post();
@@ -96,7 +99,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New([FromForm] Post post)
         {
             post.UserId = _userManager.GetUserId(User);
@@ -127,7 +130,7 @@ namespace ASPace.Controllers
             }
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Edit(int id)
         {
 
@@ -150,7 +153,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Edit(int id, Post requestPost)
         {
             try
@@ -189,7 +192,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult Delete(int id)
         {
             Post? post = db.Posts.Where(m => m.PostId == id).Include("User").First();

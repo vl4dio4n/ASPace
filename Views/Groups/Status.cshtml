@@ -19,6 +19,10 @@
                         <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
                             <div class="d-flex flex-row justify-content-between">
                                 <p><i class="bi bi-person-circle"></i>&nbsp;<a class="text-decoration-none username-link" href="/Users/Show/@mem.User.UserName">@mem.User.UserName</a><p>
+                                    @using (Html.BeginForm(actionName: "Delete", controllerName: "GroupMembers", method: FormMethod.Post, routeValues: new { UserId = mem.UserId, GroupId = mem.GroupId }))
+                                    {
+                                        <button class="bi bi-trash pull-right " style="border: none; background: transparent; " type="submit"></button>
+                                    }
                             </div>
                         </li>
                     }
@@ -50,7 +54,7 @@
                     }
                 </ul>
                 @if(cntRequests == 0){
-                    <p class="text-muted mb-2"><em>You haven't any pending requests</em></p>
+                    <p class="text-muted mb-2"><em>You don't have any pending requests</em></p>
                 }
             </div>
         </div>

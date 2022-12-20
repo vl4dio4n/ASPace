@@ -33,7 +33,7 @@
                                 @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
 
                                 <button type="submit" style="border: none; background: transparent" class="btn btn-link btn-sm"> Like </button>
-                                @*@Html.Partial("PartialCommentLike");*@
+                                @Html.Partial("PartialCommentLike");
                             }
                         }
                         else
@@ -41,7 +41,7 @@
                             using (Html.BeginForm(actionName: "Delete", controllerName: "CommentLikes", method: FormMethod.Post, routeValues: new { CommentId = Model.CommentId, UserId = (string)ViewBag.CurrentUser.Item1 }))
                             {
                                 <button type="submit" style="color: blue; border: none; background: transparent"> Like </button>
-                                @*@Html.Partial("PartialCommentLike")*@
+                                @Html.Partial("PartialCommentLike")
                             }
                         }
                     </div>

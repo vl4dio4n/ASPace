@@ -1,13 +1,28 @@
-<div class="likedby-badge likedby-badge-light">
+@model ASPace.Models.Post;
+<span class="likedby-badge likedby-badge-light">
     @if (Model.LikeCount != 0)
     {
         <div class="likedby-div">
-            <h6>Liked by </h6>
-            @if (Model.PostLikes != null)
-                @foreach (ASPace.Models.PostLike pl in Model.PostLikes)
+            <br />
+            <h6>Liked by</h6>
+            <ul>
+                @{var idx = 0;}
+                @foreach (var pl in Model.PostLikes)
                 {
-                    <p>@pl.UserId </p>
+                    if (idx < 2)
+                    {
+                        <li><a href="/Users/Show/@pl.UserId">@pl.User.UserName</a></li>
+                        ++idx;
+                    }
+                    else
+                    {
+                        <p>and @(Model.LikeCount - idx) more...</p>
+                        break;
+                    }
                 }
+            </ul>
         </div>
     }
-</div>
+</span>
+
+

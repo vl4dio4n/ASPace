@@ -8,6 +8,7 @@ using ASPace.Models;
 using ASPace.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASPace.Controllers
 {
@@ -25,7 +26,7 @@ namespace ASPace.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New(CommentLike commlike)
         {
             try
@@ -42,11 +43,11 @@ namespace ASPace.Controllers
 
         }
 
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         [HttpPost]
         public ActionResult Delete(int CommentId, string UserId)
         {
-            CommentLike ToDelete = db.CommentLikes.Find(CommentId, UserId);
+            CommentLike ToDelete = db.CommentLikes.Where(m => m.CommentId == CommentId && m.UserId == UserId).Include("Comment").Include("User").First(); ;
             db.CommentLikes.Remove(ToDelete);
             db.Comments.Find(CommentId).LikeCount--;
             db.SaveChanges();

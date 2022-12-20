@@ -25,7 +25,7 @@ else if (TempData["message"] != "The group has been created!" && TempData["messa
     }
     else
     {
-        <h3 style="font-weight: 700;">@ViewBag.Title</h3>
+        <h3 style="font-weight: 700; text-align:center">@ViewBag.Title</h3>
     }
     <form class="form-inline">
         @Html.ActionLink("Add post", "New", "Posts", null, new { @class = "btn btn-primary", @style = "margin-right: 10px;" })
@@ -39,14 +39,13 @@ else if (TempData["message"] != "The group has been created!" && TempData["messa
 
 @foreach (ASPace.Models.Post post in ViewBag.Posts)
 {
-    <div class="card" style="margin-top: 1em">
+    <div class="card" style="margin-top: 1em;">
         <div class="card-body">
             @Html.Partial("PartialPost", post)
 
-            <div class="panel-footer">
-                @Html.ActionLink("View post", "Show", "Posts", new { id = post.PostId}, new { @class = "btn btn-success btn-lg btn-block" })
-
-                @*<a class=" btn btn-success btn-lg btn-block" href="/Posts/Show/@post.PostId">View post</a>*@
+            <div class="panel-footer float-right" align="right">
+                @*@Html.ActionLink("View post", "Show", "Posts", new { id = post.PostId }, new { @class = "btn btn-success btn-lg btn-block" })*@
+               <a class="btn btn-lg background-color-cream3" href="/Posts/Show/@post.PostId">View post</a>
             </div>
         </div>
     </div>
