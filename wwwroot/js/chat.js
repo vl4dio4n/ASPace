@@ -18,7 +18,7 @@ connection.on("ReceiveMessage", function (user, message) {
     li.innerHTML = `
         <div class="card chat-message">
             <div class="card-header d-flex justify-content-between p-3">
-                <p class="fw-bold mb-0">${user} &nbsp;&nbsp;</p>
+                <p class="fw-bold mb-0"><a href="/Users/Show/${user}" class="username-link" style="text-decoration: none;">${user}</a>&nbsp;&nbsp;</p>
                 <p class="text-muted small mb-0"><i class="far fa-clock"></i>${getTime()}</p>
             </div>
             <div class="card-body">

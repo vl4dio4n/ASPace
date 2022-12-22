@@ -107,7 +107,8 @@ namespace ArticlesApp.Controllers{
             IEnumerable<Group> groups = (from gm in db.GroupMembers
                             join g in db.Groups on gm.GroupId equals g.Id
                             where gm.UserId == id
-                            select g);
+                            select g).Include("Creator");
+    
             return groups;
         }
         

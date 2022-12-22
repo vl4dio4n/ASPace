@@ -64,7 +64,7 @@
                                                 hasRequest = true;
                         
                                         if(hasRequest){
-                                            <button class="btn background-color-cream3" title="Friend request already sent" disabled>Add friend</button>
+                                            <button class="btn btn-sm background-color-cream3" title="Friend request already sent" disabled>Add friend</button>
                                         } else {
                                             <form method="post" action="/FriendRequests/New/@friend.UserId">
                                                 <button class="btn btn-sm background-color-cream3">Add friend</button>
@@ -82,44 +82,54 @@
 
 
     <div class="col-md-8" style="margin-bottom: 100px;">
-        <div class="card mb-3 card-blue2">
-            <div class="card-body">
-                <div class="card-title d-flex flex-row justify-content-between py-3 border-3 border-bottom" style="border-bottom-color: var(--blue5) !important;">
-                    <h5>@ViewBag.UserName</h5>
-                    <div class="d-flex flex-row">
-                        @if(ViewBag.UserName == ViewBag.CurrentUser){
-                            <a class="btn background-color-cream3" asp-area="Identity" asp-page="/Account/Manage/Index" title="Edit Profile"><i class="bi bi-pencil-fill"></i></a>
-                        }
-                        @if(ViewBag.UserName != ViewBag.CurrentUser && !isFriend){
-                            if(isRequested){
-                                <button class="btn background-color-cream3" title="Friend request already sent" type="submit" disabled><i class="bi bi-person-fill-add"></i></button>
-                            } else {
-                                <form method="post" action="/FriendRequests/New/@ViewBag.UserId">
-                                    <button class="btn background-color-cream3" title="Add Friend" type="submit"><i class="bi bi-person-fill-add"></i></button>
-                                </form>
-                            }
-                        } else if(isFriend){
-                            <form method="post" action="/Chats/Show?FirstUser=@ViewBag.CurrentUser&SecondUser=@ViewBag.UserName">
-                                <button class="btn background-color-cream3 me-2" title="Send Message"><i class="bi bi-send-fill"></i></button>
-                            </form>
-                            <form method="post" action="/Friendships/Delete/@ViewBag.UserId">
-                                <button class="btn background-color-cream3" title="Remove Friend"><i class="bi bi-person-fill-dash"></i></button>
-                            </form>
-                        }
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-3 card-blue2">
+                        <div class="card-body">
+                            <div class="card-title d-flex flex-row justify-content-between py-3 border-3 border-bottom" style="border-bottom-color: var(--blue5) !important;">
+                                <h5>@ViewBag.UserName</h5>
+                                <div class="d-flex flex-row">
+                                    @if(ViewBag.UserName == ViewBag.CurrentUser){
+                                        <a class="btn background-color-cream3" asp-area="Identity" asp-page="/Account/Manage/Index" title="Edit Profile"><i class="bi bi-pencil-fill"></i></a>
+                                    }
+                                    @if(ViewBag.UserName != ViewBag.CurrentUser && !isFriend){
+                                        if(isRequested){
+                                            <button class="btn background-color-cream3" title="Friend request already sent" type="submit" disabled><i class="bi bi-person-fill-add"></i></button>
+                                        } else {
+                                            <form method="post" action="/FriendRequests/New/@ViewBag.UserId">
+                                                <button class="btn background-color-cream3" title="Add Friend" type="submit"><i class="bi bi-person-fill-add"></i></button>
+                                            </form>
+                                        }
+                                    } else if(isFriend){
+                                        <form method="post" action="/Chats/Show?FirstUser=@ViewBag.CurrentUser&SecondUser=@ViewBag.UserName">
+                                            <button class="btn background-color-cream3 me-2" title="Send Message"><i class="bi bi-send-fill"></i></button>
+                                        </form>
+                                        <form method="post" action="/Friendships/Delete/@ViewBag.UserId">
+                                            <button class="btn background-color-cream3" title="Remove Friend"><i class="bi bi-person-fill-dash"></i></button>
+                                        </form>
+                                    }
+                                </div>
+                            </div>
+                            <p class="card-text m-1"><strong>Name:&nbsp;</strong>@ViewBag.FirstName @ViewBag.LastName</p>
+                            <p class="card-text m-1"><strong>Age: &nbsp;</strong>@ViewBag.Age yo</p>
+                            <p class="card-text m-1"><strong>Birth Date:&nbsp;</strong>@ViewBag.BirthDay<sup>@ViewBag.BirthDaySuffix</sup> of @ViewBag.BirthMonth</p>
+                            <p class="card-text m-1"><strong>Registration Date:&nbsp;</strong>@ViewBag.RegistrationDay<sup>@ViewBag.RegistrationDaySuffix</sup> of @ViewBag.RegistrationMonth</p>
+                            <div class="card-text m-1"><strong>About:&nbsp;</strong>@ViewBag.Description</div>
+                        </div>
+                        <div class="card-footer">
+                            <small><strong>Last seen:&nbsp;</strong>@ViewBag.Interval @ViewBag.UM ago</small>
+                        </div>
                     </div>
                 </div>
-                <p class="card-text m-1"><strong>Name:&nbsp;</strong>@ViewBag.FirstName @ViewBag.LastName</p>
-                <p class="card-text m-1"><strong>Age: &nbsp;</strong>@ViewBag.Age yo</p>
-                <p class="card-text m-1"></i><strong>Birth Date:&nbsp;</strong>@ViewBag.BirthDay<sup>@ViewBag.BirthDaySuffix</sup> of @ViewBag.BirthMonth</p>
-                <p class="card-text m-1"><strong>Registration Date:&nbsp;</strong>@ViewBag.RegistrationDay<sup>@ViewBag.RegistrationDaySuffix</sup> of @ViewBag.RegistrationMonth</p>
-                <div class="card-text m-1"><strong>About:&nbsp;</strong>@ViewBag.Description</p>
             </div>
-            <div class="card-footer">
-                <small><strong>Last seen:&nbsp;</strong>@ViewBag.Interval @ViewBag.UM ago</small>
+            <div class="row">
+                <div class="col-12">
+                    @foreach (ASPace.Models.Group group in ViewBag.Groups){
+                        @Html.Partial("PartialGroup", group)
+                    }
+                </div>
             </div>
         </div>
     </div>
-    @foreach (ASPace.Models.Group group in ViewBag.Groups){
-        @Html.Partial("PartialGroup", group)
-    }
 </div>

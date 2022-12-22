@@ -18,35 +18,29 @@ else if (TempData["message"] != "The group has been created!" && TempData["messa
 
 <!-- Search bar -->
 <br />
-<div class="navbar navbar-light bg-light justify-content-between">
-    @if (ViewBag.SearchString != "")
-    {
-        <h3 style="font-weight: 700">Search result for "@ViewBag.SearchString"   <a href="/Posts" style="text-decoration: none; color: #000000" ;"><i class="fa fa-times" style="font-size: 70%;"></i></a></h3>
-    }
-    else
-    {
-        <h3 style="font-weight: 700; text-align:center">@ViewBag.Title</h3>
-    }
-    <form class="form-inline">
-        @Html.ActionLink("Add post", "New", "Posts", null, new { @class = "btn btn-primary", @style = "margin-right: 10px;" })
-        <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search title or content" aria-label="Search" value=@ViewBag.SearchString>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</div>
 
+<div class="row">
+    <div class="col-md-4">
+        <div class="card card-blue2">
+            <div class="card-body">
+                @if (ViewBag.SearchString != ""){
+                    <h5 class="card-title p-3">Search result for "@ViewBag.SearchString"</h5>
+                } else {
+                    <h5 class="card-title">@ViewBag.Title</h5>
+                }
 
-<br />
-
-@foreach (ASPace.Models.Post post in ViewBag.Posts)
-{
-    <div class="card" style="margin-top: 1em;">
-        <div class="card-body">
-            @Html.Partial("PartialPost", post)
-
-            <div class="panel-footer float-right" align="right">
-                @*@Html.ActionLink("View post", "Show", "Posts", new { id = post.PostId }, new { @class = "btn btn-success btn-lg btn-block" })*@
-               <a class="btn btn-lg background-color-cream3" href="/Posts/Show/@post.PostId">View post</a>
+                <form class="d-flex">
+                    <input class="form-control ms-3 me-2" type="search" name="search" placeholder="Search Post" aria-label="Search" value=@ViewBag.SearchString>
+                    <button class="btn background-color-cream3" type="submit"><i class="bi bi-search" ></i></button>
+                </form>
+                <a class="btn background-color-cream3 m-3" asp-area="" asp-controller="Posts" asp-action="New">Add Post</a>
             </div>
         </div>
     </div>
-}
+
+    <div class="col-md-8" style="margin-bottom: 100px;">
+        @foreach (ASPace.Models.Post post in ViewBag.Posts) {
+            @Html.Partial("PartialPost", post)
+        }
+    </div>
+</div>
