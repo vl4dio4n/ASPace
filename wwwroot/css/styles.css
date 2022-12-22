@@ -130,6 +130,10 @@ a.navbar-brand:hover
     border: 3px solid var(--blue3);
 }
 
+a.page-link:hover{
+    background-color: var(--cream1) !important;
+}
+
 /*################################### Error view styles #################################*/
 
 .background-error-404{

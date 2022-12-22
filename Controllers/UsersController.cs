@@ -24,6 +24,49 @@ namespace ArticlesApp.Controllers{
             _userManager = userManager;
             _roleManager = roleManager;
         }
+        [Authorize(Roles="User,Moderator,Admin")]
+        public IActionResult Index(){
+            if(TempData.ContainsKey("message")){
+                ViewBag.Message = TempData["message"];
+            }
+
+            string search = "";
+
+            if(Convert.ToString(HttpContext.Request.Query["search"]) != null){
+                search = Convert.ToString(HttpContext.Request.Query["search"]).Trim().ToLower();
+            }
+
+            int _perPage = 7;
+            int currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
+            if(currentPage == 0)
+                currentPage = 1;
+            int offset = _perPage * (currentPage - 1);
+
+            Console.WriteLine("currentPage = " + currentPage);
+
+            var usersRoles = (from user in db.Users
+                    join userRole in db.UserRoles on user.Id equals userRole.UserId
+                    join role in db.Roles on userRole.RoleId equals role.Id
+                    where (user.UserName.ToLower().Contains(search) ||
+                        (user.FirstName + " " + user.LastName).ToLower().Contains(search) ||
+                        (user.LastName + " " + user.FirstName).ToLower().Contains(search) ||
+                        user.Description.ToLower().Contains(search))
+                    select new {
+                        User = user,
+                        Role = role
+                    });
+            int totalUsers = usersRoles.Count();
+            
+            ViewBag.LastPage = Convert.ToInt32(Math.Ceiling((float)totalUsers / (float)_perPage));
+            ViewBag.CurrentPage = currentPage;
+            ViewBag.Users = usersRoles.Skip(offset).Take(_perPage); 
+
+            ViewBag.SearchString = search;
+
+            ViewBag.IsAdmin = User.IsInRole("Admin");
+
+            return View();
+        }
 
         [Authorize(Roles="User,Moderator,Admin")]
         public IActionResult Show(string id){
@@ -161,6 +204,30 @@ namespace ArticlesApp.Controllers{
             }
 
             return Json(new {Users = users, IsSignedIn = (_userManager.GetUserId(User) != null)});
+        }
+
+        [HttpPost]
+        [Authorize(Roles="Admin")]
+        public IActionResult SetRole(string id){
+            Task<ApplicationUser> t1 =  _userManager.FindByIdAsync(id);
+            t1.Wait();
+            var user = t1.Result;
+
+            Task<IList<string>> t2 = _userManager.GetRolesAsync(user);
+            t2.Wait();
+            var role = t2.Result.First();
+
+            if(role == "Moderator"){
+                _userManager.RemoveFromRoleAsync(user, "Moderator");
+                _userManager.AddToRoleAsync(user, "User");
+            } else if(role == "User"){
+                _userManager.RemoveFromRoleAsync(user, "User");
+                _userManager.AddToRoleAsync(user, "Moderator");
+            }
+
+            TempData["message"] = "Role Granted Successfully";
+
+            return Redirect($"/Users/Index");
         }
     }
 }

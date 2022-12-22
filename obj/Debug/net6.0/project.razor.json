@@ -16408,6 +16408,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Views/Users/Index.cshtml",
+      "TargetPath": "Views\\Users\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/Areas/Identity/Pages/Account/Logout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "FileKind": "mvc"
