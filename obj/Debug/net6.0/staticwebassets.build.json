@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "6fuCeWIZGk2bwAJXOOqyoGCy/Xy7V3cN6FKjF7+ueJk=",
-=======
-  "Hash": "CvduLQwA0ivYr376ypdKEsVufu34VzKopguMMVNQTOo=",
->>>>>>> 49cac284665d9c551065edf1239a7a1ee3a60490
   "Source": "ASPace",
   "BasePath": "_content/ASPace",
   "Mode": "Default",
@@ -14,17 +10,17 @@
     {
       "Name": "ASPace/wwwroot",
       "Source": "ASPace",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/css/site.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/css/site.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -35,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/css/site.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/css/site.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/favicon.ico",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/favicon.ico",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -52,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/favicon.ico"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/favicon.ico"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/js/site.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/js/site.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -69,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/js/site.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/js/site.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -86,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -103,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -120,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -137,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -154,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -171,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -188,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -205,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -222,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -239,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -256,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -273,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -290,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -307,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -324,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -341,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -358,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -375,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -392,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -409,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -426,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -443,13 +439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -460,13 +456,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -477,13 +473,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -494,13 +490,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -511,13 +507,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -528,13 +524,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -545,13 +541,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -562,13 +558,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -579,13 +575,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -596,13 +592,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -613,13 +609,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -630,13 +626,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -647,13 +643,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -664,13 +660,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -681,13 +677,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -698,13 +694,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -715,13 +711,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -732,13 +728,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -749,13 +745,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -766,13 +762,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -783,13 +779,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -800,13 +796,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -817,13 +813,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/LICENSE",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/LICENSE",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -834,13 +830,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/LICENSE"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -851,13 +847,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -868,13 +864,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -885,13 +881,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/LICENSE.txt"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -902,13 +898,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -919,13 +915,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -936,13 +932,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -953,13 +949,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/LICENSE.md",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/LICENSE.md",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -970,13 +966,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/LICENSE.md"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -987,13 +983,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.js",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.js",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1004,13 +1000,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.js"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.map",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.map",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1021,13 +1017,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.map"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/LICENSE.txt",
+      "Identity": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/LICENSE.txt",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
-      "ContentRoot": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
+      "ContentRoot": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/",
       "BasePath": "Identity",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1038,13 +1034,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/LICENSE.txt"
+      "OriginalItemSpec": "/Users/cristinatimbur/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.10/staticwebassets/V5/lib/jquery/LICENSE.txt"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/scopedcss/bundle/ASPace.styles.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/obj/Debug/net6.0/scopedcss/bundle/ASPace.styles.css",
       "SourceId": "ASPace",
       "SourceType": "Computed",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/obj/Debug/net6.0/scopedcss/bundle/",
       "BasePath": "_content/ASPace",
       "RelativePath": "ASPace.styles.css",
       "AssetKind": "All",
@@ -1055,13 +1051,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/scopedcss/bundle/ASPace.styles.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/Projects/ASPace/obj/Debug/net6.0/scopedcss/bundle/ASPace.styles.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/scopedcss/projectbundle/ASPace.bundle.scp.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/obj/Debug/net6.0/scopedcss/projectbundle/ASPace.bundle.scp.css",
       "SourceId": "ASPace",
       "SourceType": "Computed",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/obj/Debug/net6.0/scopedcss/projectbundle/",
       "BasePath": "_content/ASPace",
       "RelativePath": "ASPace.bundle.scp.css",
       "AssetKind": "All",
@@ -1072,10 +1068,9 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/Debug/net6.0/scopedcss/projectbundle/ASPace.bundle.scp.css"
+      "OriginalItemSpec": "/Users/cristinatimbur/Projects/ASPace/obj/Debug/net6.0/scopedcss/projectbundle/ASPace.bundle.scp.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/.DS_Store",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
@@ -1094,12 +1089,9 @@
     },
     {
       "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/css/site.css",
-=======
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/css/site.css",
->>>>>>> 49cac284665d9c551065edf1239a7a1ee3a60490
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1113,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/css/styles.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/css/styles.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -1130,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot/css/styles.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/css/variables.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/css/variables.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "css/variables.css",
       "AssetKind": "All",
@@ -1147,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot/css/variables.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/favicon.ico",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/favicon.ico",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1164,7 +1156,6 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-<<<<<<< HEAD
       "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/.DS_Store",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
@@ -1183,12 +1174,9 @@
     },
     {
       "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/1.jpg",
-=======
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/1.jpg",
->>>>>>> 49cac284665d9c551065edf1239a7a1ee3a60490
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/1.jpg",
       "AssetKind": "All",
@@ -1202,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot/images/1.jpg"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/2.jpg",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/2.jpg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/2.jpg",
       "AssetKind": "All",
@@ -1219,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot/images/2.jpg"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/3.jpg",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/3.jpg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/3.jpg",
       "AssetKind": "All",
@@ -1236,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot/images/3.jpg"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/4.jpeg",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/4.jpeg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/4.jpeg",
       "AssetKind": "All",
@@ -1253,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot/images/4.jpeg"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/403.jpg",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/403.jpg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/403.jpg",
       "AssetKind": "All",
@@ -1270,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot/images/403.jpg"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/404.jpg",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/404.jpg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/404.jpg",
       "AssetKind": "All",
@@ -1287,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot/images/404.jpg"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/images/chat.jpg",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/chat.jpg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "images/chat.jpg",
       "AssetKind": "All",
@@ -1304,7 +1292,6 @@
       "OriginalItemSpec": "wwwroot/images/chat.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/images/Group.svg",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
@@ -1544,12 +1531,9 @@
     },
     {
       "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/js/chat.js",
-=======
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/chat.js",
->>>>>>> 49cac284665d9c551065edf1239a7a1ee3a60490
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "js/chat.js",
       "AssetKind": "All",
@@ -1563,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot/js/chat.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/signalr/dist/browser/signalr.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/js/signalr/dist/browser/signalr.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "js/signalr/dist/browser/signalr.js",
       "AssetKind": "All",
@@ -1580,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot/js/signalr/dist/browser/signalr.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/site.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/js/site.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1597,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/js/user_search.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/js/user_search.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "js/user_search.js",
       "AssetKind": "All",
@@ -1614,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot/js/user_search.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1631,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1648,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1665,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1682,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1699,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1716,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1733,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1750,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1767,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1784,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1801,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1818,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1835,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1852,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1869,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1886,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1903,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1920,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1937,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1954,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1971,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1988,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2005,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2022,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2039,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2056,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2073,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2090,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2107,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2124,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2141,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2158,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2175,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2192,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2209,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2226,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2243,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2260,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2277,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2294,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2311,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2328,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2345,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2362,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/bootstrap/LICENSE",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2379,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2396,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2413,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -2430,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2447,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2464,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2481,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2498,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2515,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2532,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2549,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2566,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/lib/jquery/LICENSE.txt",
+      "Identity": "/Users/cristinatimbur/Projects/ASPace/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "ASPace",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/wwwroot/",
+      "ContentRoot": "/Users/cristinatimbur/Projects/ASPace/wwwroot/",
       "BasePath": "_content/ASPace",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

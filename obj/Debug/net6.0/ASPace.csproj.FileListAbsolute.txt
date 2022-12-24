@@ -557,9 +557,9 @@
 /home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/bin/Debug/net6.0/libman.json
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/appsettings.Development.json
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/appsettings.json
-/Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/app.db
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/libman.json
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/ASPace.staticwebassets.runtime.json
+/Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/app.db
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/ASPace
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/ASPace.deps.json
 /Users/cristinatimbur/Projects/ASPace/bin/Debug/net6.0/ASPace.runtimeconfig.json
