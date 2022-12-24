@@ -1,38 +1,59 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    string welcomeMessage = $"Welcome{(ViewBag.user != null ? ", " : null)}{ViewBag.user}!";
+    ViewBag.Title = "Home Page";
 }
+<div class="row" style="margin-top: 1%;">
+    <div class="col-md-6" style="display: flex; align-items: center; ">
+        <center><img src="/images/HomePage.svg" width="90%" /></center>
+    </div>
+    <div class="col-md-6 logres-form" style="margin:auto">
+        <div style="text-align: center;">
+            <img src="/images/logo.png" alt="Logo" width="90%" />
+        </div>
+        <div style="text-align: center;">
+            <h6 style="margin: 10px auto;">The perfect place to interact with your friends!</h6">
+        </div>
+        <div>
+            @if (ViewBag.CurrentUser != null)
+            {
+                <h2 class="home-headers">Welcome, @ViewBag.CurrentUser.UserName!</h2>
+                <h5 class="home-headers">Start connecting with people:</h5>
+            }
+            else
+            {
+                <h2 class="home-headers">Welcome!</h2>
+                <h5 class="home-headers">Start connecting with people:</h5>
+            }
+        </div>
+        <br />
+        <div>
+            @if (ViewBag.CurrentUser != null)
+            {
+                <div class="wrap-button">
+                    @Html.ActionLink("My Profile", "Show", "Users", new { id = (string)ViewBag.CurrentUser.UserName }, new { @class = "action-buttons" })
+                </div>
+                <div class="wrap-button">
+                    @Html.ActionLink("Browse Posts", "Index", "Posts", null, new { @class = "action-buttons" })
+                </div>
+            }
+            else
+            {
+                <div class="wrap-button">
+                    <a class="action-buttons" asp-area="Identity" asp-page="/Account/Login">Log In</a>
+                    @*@Html.ActionLink("Log in", "Login", "Account", null, new { @class = "action-buttons" })*@
+                </div>
+                <div class="wrap-button">
+                    <a class="action-buttons" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                    @*@Html.ActionLink("Register", "Register", "Account", null, new { @class = "action-buttons" })*@
+                </div>
+            }
+            <div class="wrap-button">
+                @Html.ActionLink("Browse Groups", "Index", "Groups", null, new { @class = "action-buttons" })
+            </div>
+            <div class="wrap-button">
+                @Html.ActionLink("Browse Users", "Index", "Users", null, new { @class = "action-buttons" })
+            </div>
 
-<div class="text-center">
-    <h3 class="display-4"><strong>@welcomeMessage</strong></h3>
+        </div>
+    </div>
 </div>
-<br />
-<br />
 
-<div class="row">
-    <div class="col-md-4">
-        <a href="/Posts/Index/" class="text-decoration-none login-link">
-            <figure style="text-align: center;">
-                <img src="/images/1.jpg" class="img-thumbnail p-0" />
-                <figcaption class="pt-2">View Posts</figcaption>
-            </figure>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/Groups/Index/" class="text-decoration-none login-link">
-            <figure style="text-align: center; ">
-                <img src="/images/3.jpg" class="img-thumbnail p-0" />
-                <figcaption class="pt-2">View Groups </figcaption>
-            </figure>
-        </a>
-    </div>
-
-    <div class="col-md-4">
-        <a href="/Users/Index/" class="text-decoration-none login-link">
-            <figure style="text-align: center; ">
-                <img src="/images/2.jpg" class="img-thumbnail p-0" />
-                <figcaption class="pt-2"> View Users </figcaption>
-            </figure>
-        </a>
-    </div>
-</div>

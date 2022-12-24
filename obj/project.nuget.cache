@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7xupTfDDUn8FQAmkTUCo0TdPZ6C12vzsm+bLtouFoV2QkKmOiXI5h2fqEK5XPn7RWL9RL7sd11QdYXWupmUU+Q==",
+  "dgSpecHash": "nDjHtYw/jffw385KysSV9Z6gXTBMkCgdlZLf2dE49kcdvH2C+yMPNmczWs8bOpVdVrninghkB6VuUJRYgrcWUA==",
   "success": true,
-  "projectFilePath": "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj",
+  "projectFilePath": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj",
   "expectedPackageFiles": [
     "/Users/cristinatimbur/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/cristinatimbur/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

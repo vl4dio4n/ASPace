@@ -1,10 +1,19 @@
 body {
-    --blue1: #c4ddff;
-    --blue2: #80b5ff;
+    --blue1: #ffffff;
+    --blue2: #b8d6ff;
     --blue3: #2146c7;
     --blue4: #0008c1;
-    --blue5: #001d6e;
+    --blue5: #474747;
     --cream1: #fdf0e0;
-    --cream2: #fee2c5; 
-    --cream3: #e6cba8;
+    --cream2: #fee2c5;
+    --cream3: #fcd49f;
+    --light-blue: #04a9c9;
+    --first-color: #2AADE5;
+    --input-color: #80868B;
+    --border-color: #6d6e70;
+    --normal-font-size: 1rem;
+    --small-font-size: .75rem;
+    --grey-dark: #c7c7c7;
+    --grey: #e0e0e0;
+    padding-bottom: 300px;
 }

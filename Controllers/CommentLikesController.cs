@@ -20,14 +20,14 @@ namespace ASPace.Controllers
             db = context;
         }
 
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New(CommentLike commlike)
+        public IActionResult New(CommentLike commlike)
         {
             try
             {
@@ -45,13 +45,14 @@ namespace ASPace.Controllers
 
         [Authorize(Roles = "User,Moderator,Admin")]
         [HttpPost]
-        public ActionResult Delete(int CommentId, string UserId)
+        public IActionResult Delete(int CommentId, string UserId)
         {
-            CommentLike ToDelete = db.CommentLikes.Where(m => m.CommentId == CommentId && m.UserId == UserId).Include("Comment").Include("User").First(); ;
+            CommentLike? ToDelete = db.CommentLikes.Where(m => (m.CommentId == CommentId) && (m.UserId == UserId)).Include("Comment").Include("User").First();
             db.CommentLikes.Remove(ToDelete);
             db.Comments.Find(CommentId).LikeCount--;
             db.SaveChanges();
-            return Redirect("/Posts/Show/" + db.Comments.Find(CommentId).PostId);
+            var com = db.Comments.Where(m => m.CommentId == CommentId).Include("Post").First();
+            return Redirect("/Posts/Show/" + com.PostId);
         }
     }
 }

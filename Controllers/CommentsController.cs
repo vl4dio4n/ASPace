@@ -39,23 +39,6 @@ namespace ASPace.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //[Authorize(Roles = "User,Moderator,Admin")]
-        //public IActionResult Delete(int id)
-        //{
-        //    Comment? comm = db.Comments.Where(m => m.CommentId == id).Include("Post").First();
-        //    if (comm == null)
-        //    {
-        //        TempData["message"] = "The comment doesn't exist!";
-        //        return RedirectToAction("Index");
-        //    }
-        //    db.Comments.Remove(comm);
-        //    db.SaveChanges();
-        //    return Redirect("/Posts/Show/" + comm.PostId);
-        //}
-
-        
-
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult New(Comment comm)

@@ -32,7 +32,7 @@ namespace ASPace.Controllers
             _roleManager = roleManager;
         }
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Index()
+        public IActionResult Index()
         {
             string CurrUserId = _userManager.GetUserId(User);
             List<int>? myGroups = (from gr in db.GroupMembers
@@ -67,15 +67,15 @@ namespace ASPace.Controllers
 
             ViewBag.SearchString = search;
             ViewBag.Posts = posts;
-
+            ViewBag.Count = posts.Count();
             return View();
         }
 
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Show(int id)
+        public IActionResult Show(int id)
         {
             Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
-                .Include("PostLikes.User").Include("Comments").Include("Group").First();
+                .Include("PostLikes.User").Include("Comments.CommentLikes").Include("Group").First();
             if (post == null)
             {
                 TempData["message"] = "The post doesn't exist!";
@@ -88,7 +88,7 @@ namespace ASPace.Controllers
         }
 
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New()
+        public IActionResult New()
         {
             Post post = new Post();
             post.UserId = _userManager.GetUserId(User);
@@ -100,7 +100,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New([FromForm] Post post)
+        public IActionResult New([FromForm] Post post)
         {
             post.UserId = _userManager.GetUserId(User);
             post.Date = DateTime.Now;
@@ -131,7 +131,7 @@ namespace ASPace.Controllers
         }
 
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int id)
         {
 
             Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
@@ -154,7 +154,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Edit(int id, Post requestPost)
+        public IActionResult Edit(int id, Post requestPost)
         {
             try
             {
@@ -193,7 +193,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             Post? post = db.Posts.Where(m => m.PostId == id).Include("User").First();
             if (post == null)

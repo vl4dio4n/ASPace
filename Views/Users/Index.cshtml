@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Users";
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success" role="alert" style="text-align:center; margin-top:20px;">
+        @ViewBag.Message
+    </div>
+}
+
+<div class="row">
+    <div class="col-4" style="margin-bottom: 100px;">
+        <div class="card card-blue2">
+            <div class="card-body mb-3">
+                <center><img src="/images/GroupMembers.svg" width="50%;" alt="poza grup" /></center>
+                <br />
+
+                @if (ViewBag.SearchString != "")
+                {
+                    <center>
+                        <h5 class="card-title p-3">Search result for "@ViewBag.SearchString"</h5>
+                    </center>
+
+                }
+                else
+                {
+                    <center>
+                        <h2 style="margin-left: 16px;"><span class="badge bg-info">@ViewBag.Title</span></h2>
+                    </center>
+
+                    <br />
+                }
+
+                <form class="d-flex">
+                    <input class="form-control ms-3 me-2" type="search" name="search" placeholder="Search Users" aria-label="Search" value=@ViewBag.SearchString>
+                    <button class="btn background-color-cream3" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-8" style="margin-bottom: 100px;">
+        @foreach (var user in ViewBag.Users)
+        {
+            <div class="card card-blue2 mb-3">
+                <div class="card-body">
+                    <div class="card-title d-flex flex-row justify-content-between pb-2 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">
+                        <h5>
+                            <i class="bi bi-person-circle"></i>&nbsp;
+                            <a href="/Users/Show/@user.User.UserName" class="text-decoration-none" style="color: var(--first-color)">@user.User.UserName</a>&nbsp;
+                            <span class="small text-muted">@user.User.FirstName @user.User.LastName</span>
+                        </h5>
+                        @if (ViewBag.IsAdmin)
+                        {
+                            if (user.Role.Name == "User")
+                            {
+                                <form method="post" action="/Users/SetRole/@user.User.Id">
+                                    <button class="btn btn-sm background-color-cream3">Promote to moderator</button>
+                                </form>
+                            }
+                            else if (user.Role.Name == "Moderator")
+                            {
+                                <form method="post" action="/Users/SetRole/@user.User.Id">
+                                    <button class="btn btn-sm background-color-cream3">Demote to user</button>
+                                </form>
+                            }
+                        }
+                    </div>
+                    <p class="card-subtitle"><strong>Role:&nbsp;</strong>@user.Role.Name</p>
+                    <div><strong>About:&nbsp;</strong>@user.User.Description</div>
+                </div>
+            </div>
+        }
+
+        <div class="d-flex flex-row justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @{
+                        int previousPage = ViewBag.CurrentPage == 1 ? 1 : ViewBag.CurrentPage - 1;
+                        int nextPage = ViewBag.CurrentPage == ViewBag.LastPage ? ViewBag.LastPage : ViewBag.CurrentPage + 1;
+                    }
+                    <li class="page-item"><a class="page-link text-dark background-color-cream3" href="/Users/Index?page=@previousPage&search=@ViewBag.SearchString" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    @for (int i = 1; i <= ViewBag.lastPage; i++)
+                    {
+                        <li class="page-item"> <a class="page-link text-dark background-color-cream3" href="/Users/Index?page=@i&search=@ViewBag.SearchString">@(i)</a></li>
+                    }
+                    <li class="page-item"><a class="page-link text-dark background-color-cream3" href="/Users/Index?page=@nextPage&search=@ViewBag.SearchString" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -2,8 +2,8 @@
 
 <div class="card mb-3 card-blue2">
     <div class="card-body">
-        <div class="card-tilte d-flex flex-row justify-content-between border-2 border-bottom mb-2" style="border-bottom-color: var(--blue5) !important;">
-            <h5><a href="/Groups/Show/@Model.Id" class="text-decoration-none username-link">@Model.Title</a></h5>
+        <div class="card-tilte d-flex flex-row justify-content-between border-2 border-bottom mb-2" style="border-bottom-color: black !important;">
+            <h5><a href="/Groups/Show/@Model.Id" class="text-decoration-none" style="color: var(--first-color)">@Model.Title</a></h5>
             <a href="/Users/Show/@Model.Creator.UserName" class="text-decoration-none username-link"> <i class="bi bi-person"></i>&nbsp;@Model.Creator.UserName</a>
         </div>
         <div><strong>Description:</strong>&nbsp;@Model.Description</div>

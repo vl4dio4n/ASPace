@@ -7,46 +7,44 @@
 
 <div class="row" style="height: 100%;">
     <div class="col-md-4"></div>
-    <div class="col-md-4" style="margin-top: 10%;">
-        <div class="card card-border">
-            <div class="card-body background-color-blue2">
-                <h2 class="card-title text-center">Log in</h2>
+    <div class="col-md-4" style="margin-top: 1%;">
+        <div class="card-border">
+            <div class="card-body">
+                <h2 class="card-title text-center">Log In</h2>
                 <form id="account" method="post">
                     <br/>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-floating">
-                        <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" />
-                        <label asp-for="Input.UserName" class="form-label"></label>
-                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    <div class="logres-form-div">
+                        <input asp-for="Input.UserName" class="logres-form-input" autocomplete="username" aria-required="true" />
+                        <label asp-for="Input.UserName" class="logres-form-label"></label>
+                        <div class="div-span"><span asp-validation-for="Input.UserName" class="text-danger eroare"></span></div>
                     </div>
                     <br/>
-                    <div class="form-floating">
-                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                        <label asp-for="Input.Password" class="form-label"></label>
-                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <div class="logres-form-div">
+                        <input asp-for="Input.Password" class="logres-form-input" autocomplete="current-password" aria-required="true" />
+                        <label asp-for="Input.Password" class="logres-form-label"></label>
+                        <div class="div-span"><span asp-validation-for="Input.Password" class="text-danger eroare"></span></div>
                     </div>
-                    <br/>
-                    <div>
+                    <div class="logres-form-div">
                         <div class="checkbox">
-                            <label asp-for="Input.RememberMe" class="form-label">
+                            <label asp-for="Input.RememberMe" class="logres-form-label">
                                 <input class="form-check-input" asp-for="Input.RememberMe" />
                                 @Html.DisplayNameFor(m => m.Input.RememberMe)
                             </label>
                         </div>
                     </div>
-                    <br/>
                     <div>
-                        <button id="login-submit" type="submit" class="w-100 btn btn-lg background-color-cream3">Log in</button>
+                        <button id="login-submit" type="submit" class="w-100 btn btn-lg logres-form-button">Log In</button>
                     </div>
-                    <br/>
+                    <br />
                     <div>
-                        <p>
+                        <p class="logres-form-paragraph">
                             <a class="login-link" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
                         </p>
-                        <p>
+                        <p class="logres-form-paragraph">
                             <a class="login-link" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
                         </p>
-                        <p>
+                        <p class="logres-form-paragraph">
                             <a class="login-link" id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
                         </p>
                     </div>

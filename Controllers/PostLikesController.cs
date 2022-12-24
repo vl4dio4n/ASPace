@@ -28,7 +28,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New(PostLike postlike)
+        public IActionResult New(PostLike postlike)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace ASPace.Controllers
 
         [Authorize(Roles = "User,Moderator,Admin")]
         [HttpPost]
-        public ActionResult Delete(int PostId, string UserId)
+        public IActionResult Delete(int PostId, string UserId)
         {
             PostLike? ToDelete = db.PostLikes.Where(m => m.PostId == PostId && m.UserId == UserId).Include("User").Include("Post").First();
 

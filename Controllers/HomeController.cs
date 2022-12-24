@@ -10,21 +10,42 @@ namespace ASPace.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationDbContext db;
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
 
     public HomeController(
-        UserManager<ApplicationUser> userManager
+        ApplicationDbContext context,
+        UserManager<ApplicationUser> userManager,
+        RoleManager<IdentityRole> roleManager
     )
     {
+        db = context;
         _userManager = userManager;
+        _roleManager = roleManager;
     }
 
-    public IActionResult Index()
+    public ActionResult Index()
     {
         ViewBag.user = _userManager.GetUserName(User);
+        string CurrentUserId = _userManager.GetUserId(User);
+        ViewBag.CurrentUser = db.Users.Find(CurrentUserId);
         return View();
     }
 
+    public ActionResult About()
+    {
+        ViewBag.Message = "Your application description page.";
+
+        return View();
+    }
+
+    public ActionResult Contact()
+    {
+        ViewBag.Message = "Your contact page.";
+
+        return View();
+    }
     public IActionResult Privacy()
     {
         return View();

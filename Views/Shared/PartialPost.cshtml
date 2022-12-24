@@ -1,18 +1,15 @@
 @model ASPace.Models.Post;
 
-<div class="card card-blue2 mb-4">
-    <div class="card-body">
-        <div class="card-title d-flex flex-row justify-content-between border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">
-            <h5 class="card-title">@Model.Title</h5>
-            <p class="text-small text-muted"> @Model.Date.ToString("dd/MM/yyyy HH:mm:ss")</p>
-        </div>
-        <div class="card-subtitle mb-2">
-            <p class="m-0"><i class="bi bi-person-square"></i> <a href="/Users/Show/@Model.User.UserName" class="text-decoration-none username-link">@Model.User.UserName</a></p>
-            @if (Model.GroupId != null){
-                <p class="m-0"><i class="bi bi-people"></i> <a href="/Groups/Show/@Model.GroupId" class="text-decoration-none username-link">@Model.Group.Title</a></p>
-            }
-        </div>
-        <div class="card-text mb-2">@Model.Content</div>
-        @*<a class=" btn btn-sm background-color-cream3" href="/Posts/Show/@Model.PostId">View post</a>*@
-    </div>
+<div class="card-title d-flex flex-row justify-content-between border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">
+    <h4 style="color: var(--first-color)">@Model.Title</h4>
+    <p class="text-small text-muted"> @Model.Date.ToString("dd/MM/yyyy HH:mm:ss")</p>
 </div>
+<br />
+<div class="card-subtitle mb-2">
+    <p class="m-0"><i class="bi bi-person-square"></i> <a href="/Users/Show/@Model.User.UserName" class="text-decoration-none username-link">@Model.User.UserName</a></p>
+    @if (Model.GroupId != null)
+    {
+        <p class="m-0"><i class="bi bi-people"></i> <a href="/Groups/Show/@Model.GroupId" class="text-decoration-none username-link">@Model.Group.Title</a></p>
+    }
+</div>
+<div class="card-text mb-2">@Model.Content</div>

@@ -19,27 +19,47 @@
 
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="margin-bottom: 100px;">
         <div class="card card-blue2">
             <div class="card-body">
-                @if (ViewBag.SearchString != ""){
-                    <h5 class="card-title p-3">Search result for "@ViewBag.SearchString"</h5>
-                } else {
-                    <h5 class="card-title">@ViewBag.Title</h5>
+                <center><img src="/images/Group.svg" width="40%;" alt="poza grup" /></center>
+                <br />
+                @if (ViewBag.SearchString != "")
+                {
+                    <center>
+                        <h5 class="card-title p-3">Search result for "@ViewBag.SearchString"</h5>
+                    </center>
+
+                }
+                else
+                {
+                    <center>
+                        <h2 style="margin-left: 16px;"><span class="badge bg-info">@ViewBag.Title</span></h2>
+                    </center>
+                    <br />
                 }
 
                 <form class="d-flex">
                     <input class="form-control ms-3 me-2" type="search" name="search" placeholder="Search Group" aria-label="Search" value=@ViewBag.SearchString>
-                    <button class="btn background-color-cream3" type="submit"><i class="bi bi-search" ></i></button>
+                    <button class="btn background-color-cream3" type="submit"><i class="bi bi-search"></i></button>
                 </form>
-                <a class="btn background-color-cream3 m-3" asp-area="" asp-controller="Groups" asp-action="New">Create a new group</a>
+                <center><a class="btn background-color-cream3 m-3" asp-area="" asp-controller="Groups" asp-action="New">Create a new group</a></center>
             </div>
         </div>
     </div>
 
-    <div class="col-md-8 overflow-auto" style="max-height: 800px;">
-        @foreach (ASPace.Models.Group group in ViewBag.Groups){
-            @Html.Partial("PartialGroup", group)
+    <div class="col-md-8 overflow-auto" style="max-height: 800px; margin-bottom: 100px;">
+        @if (ViewBag.Count == 0)
+        {
+            <center><p class="text-muted mb-2"><em>There are no groups available.</em></p></center>
         }
+        else
+        {
+            @foreach (ASPace.Models.Group group in ViewBag.Groups)
+            {
+                @Html.Partial("PartialGroup", group)
+            }
+        }
+
     </div>
 </div>

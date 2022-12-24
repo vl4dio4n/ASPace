@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj": {}
+    "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj": {}
   },
   "projects": {
-    "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj": {
+    "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj",
+        "projectUniqueName": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj",
         "projectName": "ASPace",
-        "projectPath": "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj",
+        "projectPath": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj",
         "packagesPath": "/Users/cristinatimbur/.nuget/packages/",
-        "outputPath": "/Users/cristinatimbur/Projects/ASPace/obj/",
+        "outputPath": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/cristinatimbur/.nuget/NuGet/NuGet.Config"

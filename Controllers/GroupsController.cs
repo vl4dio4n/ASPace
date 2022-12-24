@@ -32,7 +32,7 @@ namespace ASPace.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
-        public ActionResult Index()
+        public IActionResult Index()
         {
             var groups = db.Groups.Include("Creator").OrderByDescending(a => a.Date);
 
@@ -48,15 +48,16 @@ namespace ASPace.Controllers
                 || group.Description.ToLower().Contains(search)
                 ).Select(g => g.Id).ToList();
 
-            groups = groups.Where(group => groupIds.Contains(group.Id)).OrderByDescending(g => g.Date);
+            groups = groups.Where(group => groupIds.Contains(group.Id)).Include("Creator").OrderByDescending(g => g.Date);
 
             ViewBag.SearchString = search;
             ViewBag.Groups = groups;
+            ViewBag.Count = groups.Count();
             return View();
         }
 
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New()
+        public IActionResult New()
         {
             Group group = new Group();
             group.CreatorId = _userManager.GetUserId(User);
@@ -67,7 +68,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New([FromForm] Group group)
+        public IActionResult New([FromForm] Group group)
         {
             group.CreatorId = _userManager.GetUserId(User);
             group.Date = DateTime.Now;
@@ -109,7 +110,7 @@ namespace ASPace.Controllers
         }
 
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int id)
         {
             Group? group = db.Groups.Where(m => m.Id == id)
                         .Include("Creator").Include("GroupMembers").Include("Posts")
@@ -133,7 +134,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Edit(int id, Group requestGroup)
+        public IActionResult Edit(int id, Group requestGroup)
         {
             try
             {
@@ -194,7 +195,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             Group? group = db.Groups.Where(m => m.Id == id)
                         .Include("Creator").Include("GroupMembers").Include("Posts")

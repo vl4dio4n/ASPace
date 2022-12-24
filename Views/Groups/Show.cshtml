@@ -5,33 +5,38 @@
 }
 
 <div class="row">
-    <div class="col-md-4">
-        <div class="container" style="margin-bottom: 100px;">
+    <div class="col-md-1">
+        <a href="/Groups/Index" class="btn background-color-grey btn-block mb-2" style="float:right !important;">Go to Groups</a>
+    </div>
+    <div class="col-md-4" style="margin-bottom: 100px;">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="card card-blue2 mb-4">
-                        <img src="/images/4.jpeg" width="100%;" alt="poza grup" style="border: 2px solid var(--blue5);" />
+                        <center><img src="/images/groupshow.png" width="50%;" alt="poza grup" /></center>
                         <div class="card-body">
                             <h5 class="card-title mb-3">@Model.Title</h5>
                             <p class="card-subtitle"><strong>Creator:&nbsp;</strong><a href="/Users/Show/@Model.Creator.UserName" class="text-decoration-none username-link"><i class="bi bi-person-circle"></i>@Model.Creator.UserName</a></p>
                             <div class="mt-2 mb-2"><strong>Description:</strong>&nbsp;@Model.Description</div>
                             @*creator*@
+                        <center>
                             @if (ViewBag.CurrentUser.Item1 == Model.CreatorId)
                             {
                                 using (Html.BeginForm(actionName: "Edit", controllerName: "Groups", routeValues: new { id = Model.Id }, method: FormMethod.Get, null, htmlAttributes: new { @style = "display: inline" }))
                                 {
-                                    <button class="btn btn-sm background-color-cream3 me-1" type="submit">Edit Group</button>
+                                    <button class="btn btn-sm background-color-cream3 me-1" type="submit">Edit</button>
                                 }
-                                <a class="btn btn-sm background-color-cream3 me-1" href="/Groups/Status/@Model.Id">Group Relations</a>
+                                <a class="btn btn-sm background-color-cream3 me-1" href="/Groups/Status/@Model.Id">Relations</a>
                             }
                             @*creator sau admin*@
                             @if (ViewBag.CurrentUser.Item2)
                             {
                                 using (Html.BeginForm(actionName: "Delete", controllerName: "Groups", routeValues: new { id = Model.Id }, method: FormMethod.Post, null, htmlAttributes: new { @style = "display: inline" }))
                                 {
-                                    <button class="btn btn-sm background-color-cream3" type="submit">Delete Group</button>
+                                    <button class="btn btn-sm background-color-cream3" type="submit">Delete</button>
                                 }
                             }
+                        </center>
 
                             @* nu e membru*@
                             @if (!ViewBag.IsMember)
@@ -103,7 +108,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7" style="margin-bottom: 100px;">
         @if (ViewBag.IsMember || ViewBag.CurrentUser.Item2) {
         <div class="container" style="margin-bottom: 100px;">
             <div class="row">
@@ -137,22 +142,28 @@
                         </div>
                     </div>
                     <@Model.Posts>
+
                         @foreach (ASPace.Models.Post post in Model.Posts.OrderByDescending(m => m.Date))
                         {
                             <div class="row">
                                 <div class="col-12">
-                                    @Html.Partial("PartialPost", post)
-                                </div>
+                                    <div class="card card-blue2">
+                                        <div class="card-body">
+                                            @Html.Partial("PartialPost", post)
+                                        </div>
+                                        </div>
+                                    </div>
                             </div>
-                        }
-                </div>
+                            <br/>
+                }
+                    </div>
             </div>
         </div>
         }
         else {
-                                            <br />
+            <br />
             <p class="text-muted mb-2" style="text-align:center"><em>You aren't a member of this group</em></p>
         }
     </div>
 </div>
-
+<div height="200px" style="color: white">2022</div>

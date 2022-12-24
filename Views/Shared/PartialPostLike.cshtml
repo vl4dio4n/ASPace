@@ -1,28 +1,19 @@
 @model ASPace.Models.Post;
-<span class="likedby-badge likedby-badge-light">
-    @if (Model.LikeCount != 0)
+<ul class="dropdown-menu">
+    <li class="dropdown-header"><strong>Liked by:</strong></li>
+    <li class="dropdown-item"><hr class="dropdown-divider"></li>
+    @{var idx = 0;}
+    @foreach (var pl in Model.PostLikes)
     {
-        <div class="likedby-div">
-            <br />
-            <h6>Liked by</h6>
-            <ul>
-                @{var idx = 0;}
-                @foreach (var pl in Model.PostLikes)
-                {
-                    if (idx < 2)
-                    {
-                        <li><a href="/Users/Show/@pl.UserId">@pl.User.UserName</a></li>
-                        ++idx;
-                    }
-                    else
-                    {
-                        <p>and @(Model.LikeCount - idx) more...</p>
-                        break;
-                    }
-                }
-            </ul>
-        </div>
+        if (idx < 2)
+        {
+            <li class="dropdown-item"><i class="bi bi-person-circle"></i>&nbsp;<a href="/Users/Show/@pl.User.UserName" class="text-decoration-none username-link">@pl.User.UserName</a></li>
+            ++idx;
+        }
+        else
+        {
+            <li class="dropdown-item">and @(Model.LikeCount - idx) more...</li>
+            break;
+        }
     }
-</span>
-
-
+</ul>

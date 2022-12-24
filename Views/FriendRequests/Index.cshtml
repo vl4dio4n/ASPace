@@ -25,7 +25,7 @@
             <div class="card-body">
                 <h5 class="card-title pb-3 border-2 border-bottom" style="border-bottom-color: var(--blue5) !important;">Received Friend Requests</h5>
                 @if(ViewBag.Requests.Length == 0){
-                    <p class="text-muted mb-2"><em>You don't have any pending friend requests</em></p>
+                    <p class="text-muted mb-2"><em>You don't have any pending received friend requests</em></p>
                 } else {
                     <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 750px">
                         @for(int i = 0; i < ViewBag.Requests.Length; i ++){

@@ -1,17 +1,40 @@
 ﻿<Properties StartupConfiguration="{E0126694-453D-4776-8F56-3DE2D87CE9E6}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/PostsController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ASPace PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/styles.css">
     <Files>
-      <File FileName="Controllers/GroupsController.cs" Line="46" Column="21" />
-      <File FileName="Controllers/PostsController.cs" Line="69" Column="1" />
+      <File FileName="Views/Posts/Show.cshtml" Line="33" Column="92" />
+      <File FileName="wwwroot/css/styles.css" Line="105" Column="2" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="75" Column="41" />
+      <File FileName="wwwroot/js/user_search.js" Line="51" Column="60" />
+      <File FileName="Views/Chats/Index.cshtml" Line="8" Column="34" />
+      <File FileName="Views/Shared/PartialChat.cshtml" Line="3" Column="38" />
+      <File FileName="Views/Chats/Show.cshtml" Line="1" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASPace" expanded="True">
             <Node name="ASPace" expanded="True">
+              <Node name="Areas" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Chats" expanded="True" />
+                <Node name="Groups" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Posts" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="Users" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="images" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -21,9 +44,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ASPace PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

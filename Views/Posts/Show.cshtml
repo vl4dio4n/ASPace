@@ -18,124 +18,105 @@ else if (TempData["message"] == "You don't have enough permissions to modify thi
 
 <br />
 <div class="row">
-    <div class="col-md-4">
-        @if (Model.GroupId != null)
-        {
-            @Html.ActionLink("Back to Group", "Show", "Groups", new { id = Model.GroupId }, new { @class = "btn btn-info btn-block" });
-        }
+    <div class="col-md-1">
+        <a href="/Posts/Index" class="btn background-color-grey btn-block mb-2" style="float:right !important;">Go to Posts</a>
     </div>
-    <div class="col-md-4">
-        @Html.ActionLink("Go to posts", "Index", new { controller = "Posts" }, new { @class = "btn btn-warning btn-block" })
-    </div>
-    <div class="col-md-4">
-        @{ string text = "Go to " + Model.User.UserName + "'s page ";}
-        @Html.ActionLink(text, "Show", "Users", new { id = Model.User.UserName }, new { @class = "btn btn-info btn-block" })
-    </div>
-
-</div>
-
-<br />
-
-<div class="card mx-auto" style="width: 60rem;">
-    <div class="card-body">
-        @Html.Partial("PartialPost", Model)
-    </div>
-
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-2" style="text-align:center">
-            <!--Like section-->
-            @if (!ViewBag.IsLikedByUser)
-            {
-                using (Html.BeginForm(actionName: "New", controllerName: "PostLikes", method: FormMethod.Post))
-                {
-                    @Html.Hidden("PostId", Model.PostId)
-                    @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
-                    <button type="submit" class="btn btn-outline-primary">
-                        <i class="bi bi-hand-thumbs-up"></i> Like post
-                    </button>
-                    @Html.Partial("PartialPostLike")
-
-                }
-            }
-            else
-            {
-                using (Html.BeginForm(actionName: "Delete", controllerName: "PostLikes", method: FormMethod.Post, routeValues: new { PostId = Model.PostId, UserId = (string)ViewBag.CurrentUser.Item1 }))
-                {
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-hand-thumbs-up"></i>  Like post
-                    </button>
-                    @Html.Partial("PartialPostLike")
-
-                }
-            }
-
-        </div>
-        @if (ViewBag.CurrentUser.Item2)
-        {
-            if (ViewBag.CurrentUser.Item1 == Model.UserId)
-            {
-                <div class="col-md-2" style="text-align:center">
-                    <a href="/Posts/Edit/@Model.PostId" class="btn btn-outline-dark"><i class="bi bi-pencil"></i>  Edit post</a>
-                </div>
-            }
-
-            <div class="col-md-2" style="text-align:center">
-                @using (Html.BeginForm(actionName: "Delete", controllerName: "Posts", method: FormMethod.Post, routeValues: new { id = Model.PostId }))
-                {
-                    <button type="submit" class="btn btn-outline-danger"><i class="bi bi-trash"></i>  Delete post</button>
-                }
-            </div>
-            <br />
-
-        }
-        else
-        {
-            <div class="col-md-2"></div>
-            <div class="col-md-2"></div>
-            <br />
-        }
-        <div class="clearfix"></div>
-        <div class="col-md-3"></div>
-        <br />
-    </div>
-</div>
-
-
-@*comments*@
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-
-        @using (Html.BeginForm(actionName: "New", controllerName: "Comments"))
-        {
-            <div class="card my-4">
-                @*@Html.ValidationSummary(false, "", new { @class = "text-danger" })*@
-
-                @Html.Hidden("PostId", Model.PostId)
-                @Html.Label("Content", "Enter your comment", new { @class = "card-header" })
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-8">
-                            @Html.TextArea("Content", "", new { @class = "form-control form-control-lg", @style = "resize: none; width: 80%" })
-                        </div>
-                        <div class="col-md-4">
-                            @*@Html.ValidationMessage("Content", "Mesaj", new { @class = "text-danger" })*@
-                            <button class="btn btn-success pull-right" type="submit">Add comment</button>
+    <div class="col-md-5" style="margin-bottom: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-blue2">
+                        <div class="card-body">
+                            @Html.Partial("PartialPost", Model)
+                            <hr />
+                            <div class="d-flex flex-direction-row justify-content-center">
+                                <div class="d-flex flex-direction-row justify-content-center">
+                                    @if (ViewBag.CurrentUser.Item2)
+                                    {
+                                        if (ViewBag.CurrentUser.Item1 == Model.UserId)
+                                        {
+                                            <a href="/Posts/Edit/@Model.PostId" class="btn background-color-blue1 me-2"><i class="bi bi-pencil"></i>Edit</a>
+                                        }
+                                        @using (Html.BeginForm(actionName: "Delete", controllerName: "Posts", method: FormMethod.Post, routeValues: new { id = Model.PostId }))
+                                        {
+                                            <button type="submit" class="btn background-color-blue1 me-2"><i class="bi bi-trash"></i>Delete</button>
+                                        }
+                                    }
+                                </div>
+                                @if (!ViewBag.IsLikedByUser)
+                                {
+                                    using (Html.BeginForm(actionName: "New", controllerName: "PostLikes", method: FormMethod.Post))
+                                    {
+                                        <div class="btn-group">
+                                            @Html.Hidden("PostId", Model.PostId)
+                                            @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
+                                            <button type="submit" class="btn btn-outline-primary pull-right">
+                                                <i class="bi bi-hand-thumbs-up"></i>Like&nbsp;<span class="badge background-color-blue1 text-dark">@Model.LikeCount</span>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            @Html.Partial("PartialPostLike")
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    using (Html.BeginForm(actionName: "Delete", controllerName: "PostLikes", method: FormMethod.Post, routeValues: new { PostId = Model.PostId, UserId = (string)ViewBag.CurrentUser.Item1 }))
+                                    {
+                                        <div class="btn-group">
+                                            <button type="submit" class="btn btn-primary pull-right">
+                                                <i class="bi bi-hand-thumbs-up"></i>Like&nbsp;<span class="badge background-color-cream3 text-dark">@Model.LikeCount</span>
+                                            </button>
+                                            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            @Html.Partial("PartialPostLike")
+                                        </div>
+                                    }
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        }
-        <br />
-        <br />
+            <div class="row">
+                <div class="col-12">
+                    @using (Html.BeginForm(actionName: "New", controllerName: "Comments"))
+                    {
+                        <div class="card my-4">
+                            @*@Html.ValidationSummary(false, "", new { @class = "text-danger" })*@
+                            <div class="card-body">
+                                @Html.Hidden("PostId", Model.PostId)
+                                <center><strong>@Html.Label("Content", "Enter your comment", new { @class = "form-label" })</strong></center>
+                                @Html.TextArea("Content", "", new { @class = "form-control form-control-lg" })
+                                @*@Html.ValidationMessage("Content", "Mesaj", new { @class = "text-danger" })*@
+                            <center><button class="btn background-color-cream3 pull-right mt-3" type="submit">Add comment</button></center>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-2"></div>
+
+    <div class="col-md-6" style="margin-bottom: 100px;">
+        <center>
+            <h2><span class="card-title badge bg-info">Comments Section</span></h2>
+        </center>
+        @if (Model.Comments.Count() != 0)
+        {
+            <div class="container">
+                @foreach (ASPace.Models.Comment comm in Model.Comments.OrderByDescending(m => m.Date))
+                {
+                    @Html.Partial("PartialComment", comm);
+                }
+            </div>
+        }
+        else
+        {
+            <center><p class="text-muted mb-2"><em>There are no comments for this post.</em></p></center>
+        }
+    </div>
 </div>
-@if (Model.Comments != null)
-{
-    @foreach (ASPace.Models.Comment comm in Model.Comments)
-    {
-        @Html.Partial("PartialComment", comm);
-    }
-}
+<div height="300px" style="color: white">2022</div>

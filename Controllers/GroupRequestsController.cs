@@ -31,12 +31,12 @@ namespace ASPace.Controllers
 
         // GET: GroupRequests
         [NonAction]
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
 
-        /*  public ActionResult Show(int GroupId)
+        /*  public IActionResult Show(int GroupId)
             {
                 var group = db.Groups.Find(GroupId);
                 var grouprequests = group.GroupRequests;
@@ -49,7 +49,7 @@ namespace ASPace.Controllers
 
         [HttpPost]
         [Authorize(Roles = "User,Moderator,Admin")]
-        public ActionResult New([FromForm] GroupRequest grouprequest)
+        public IActionResult New([FromForm] GroupRequest grouprequest)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace ASPace.Controllers
 
         [Authorize(Roles = "User,Moderator,Admin")]
         [HttpPost]
-        public ActionResult Delete(string SenderId, int GroupId)
+        public IActionResult Delete(string SenderId, int GroupId)
         {
             GroupRequest ToDelete = db.GroupRequests.Find(SenderId, GroupId);
             db.GroupRequests.Remove(ToDelete);
@@ -76,7 +76,7 @@ namespace ASPace.Controllers
             return RedirectToAction("Status", "Groups", new { id = GroupId });
         }
         [HttpPost]
-        public ActionResult Accept(string SenderId, int GroupId)
+        public IActionResult Accept(string SenderId, int GroupId)
         {
             GroupRequest ToDelete = db.GroupRequests.Find(SenderId, GroupId);
             db.GroupRequests.Remove(ToDelete);
