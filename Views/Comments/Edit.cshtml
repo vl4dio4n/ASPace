@@ -19,10 +19,11 @@
 
                         <br />
 
-                        <strong>@Html.Label("Content", "Comment's content")</strong>
+                        <strong>            <strong>@Html.Label("Content", "Comment's content")</strong>
+                        <br /></strong>
                         <br />
-                        <br />
-                        @Html.EditorFor(m => m.Content, new { htmlAttributes = new { @class = "form-control" } })
+                                    <br />
+                                    @Html.EditorFor(m => m.Content, new { htmlAttributes = new { @class = "form-control" } })
 
                         @Html.ValidationMessageFor(m => m.Content, null, new { @class = "text-danger" })
                         <br />

@@ -1,3 +1,7 @@
+.background-color-blue1{
+    background-color: var(--blue1);
+}
+
 .background-color-blue2{
     background-color: var(--blue2);
 }
@@ -147,6 +151,11 @@ a.navbar-brand:hover
     background-color: var(--light-blue);
 }
 
+.card-cream3{
+    background-color: var(--cream3);
+    border: 3px solid var(--blue5);
+}
+
 .userslist-item-hover:hover{
     background-color: var(--blue1);
 }
@@ -157,6 +166,10 @@ a.navbar-brand:hover
 
 .search-user-modal{
     border: 2px solid var(--blue3);
+}
+
+a.page-link:hover{
+    background-color: var(--cream1) !important;
 }
 
 /*################################### Error view styles #################################*/
