@@ -263,29 +263,5 @@ namespace ArticlesApp.Controllers
 
             return Redirect($"/Users/Index");
         }
-
-        [HttpPost]
-        [Authorize(Roles="Admin")]
-        public IActionResult SetRole(string id){
-            Task<ApplicationUser> t1 =  _userManager.FindByIdAsync(id);
-            t1.Wait();
-            var user = t1.Result;
-
-            Task<IList<string>> t2 = _userManager.GetRolesAsync(user);
-            t2.Wait();
-            var role = t2.Result.First();
-
-            if(role == "Moderator"){
-                _userManager.RemoveFromRoleAsync(user, "Moderator");
-                _userManager.AddToRoleAsync(user, "User");
-            } else if(role == "User"){
-                _userManager.RemoveFromRoleAsync(user, "User");
-                _userManager.AddToRoleAsync(user, "Moderator");
-            }
-
-            TempData["message"] = "Role Granted Successfully";
-
-            return Redirect($"/Users/Index");
-        }
     }
 }

@@ -9871,32 +9871,25 @@
     ]
   },
   "packageFolders": {
-    "/home/vl4dio4n/.nuget/packages/": {}
+    "/Users/cristinatimbur/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj",
+      "projectUniqueName": "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj",
       "projectName": "ASPace",
-      "projectPath": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/ASPace.csproj",
+      "projectPath": "/Users/cristinatimbur/Projects/ASPace/ASPace.csproj",
       "packagesPath": "/Users/cristinatimbur/.nuget/packages/",
-      "outputPath": "/Users/cristinatimbur/Projects/aspace 24 dec aproape perf/obj/",
-=======
-      "projectUniqueName": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/ASPace.csproj",
-      "projectName": "ASPace",
-      "projectPath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/ASPace.csproj",
-      "packagesPath": "/home/vl4dio4n/.nuget/packages/",
-      "outputPath": "/home/vl4dio4n/UniBuc/asp.net/Projects/ASPace/obj/",
->>>>>>> 49cac284665d9c551065edf1239a7a1ee3a60490
+      "outputPath": "/Users/cristinatimbur/Projects/ASPace/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/vl4dio4n/.nuget/NuGet/NuGet.Config"
+        "/Users/cristinatimbur/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9946,7 +9939,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -9958,7 +9952,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }
