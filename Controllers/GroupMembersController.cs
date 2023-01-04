@@ -71,7 +71,7 @@ namespace ASPace.Controllers
                 db.SaveChanges();
                 string controller = (string)TempData["ReturnTo"];
             }
-            return RedirectToAction("Status", "Groups", new { id = GroupId });
+            return RedirectToAction("Show", "Groups", new { id = GroupId });
         }
     }
 }

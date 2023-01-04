@@ -39,6 +39,7 @@
                         </center>
 
                             @* nu e membru*@
+                        <center>
                             @if (!ViewBag.IsMember)
                             {
                                 @* public*@
@@ -49,7 +50,7 @@
                                         @Html.Hidden("GroupId", (int)Model.Id)
                                         @Html.Hidden("UserId", (string)ViewBag.CurrentUser.Item1)
                                         @Html.Hidden("Function", (string)"basic")
-                                        <button type="submit" class="btn btn-sm background-color-cream3">Join Group</button>
+                                        <button type="submit" class="btn btn-sm background-color-cream3" style="margin-bottom: 5px !important; margin-top: 5px !important">Join Group</button>
                                     }
                                 }
                                 @* privat*@
@@ -60,7 +61,7 @@
                                     {
                                         using (Html.BeginForm(actionName: "Delete", controllerName: "GroupRequests", routeValues: new { SenderId = (string)ViewBag.CurrentUser.Item1, GroupId = (int)Model.Id }, method: FormMethod.Post, null, htmlAttributes: new { @style = "display: inline" }))
                                         {
-                                            <button type="submit" class="btn btn-sm background-color-cream3">Cancel Request</button>
+                                            <button type="submit" class="btn btn-sm background-color-cream3" style="margin-bottom: 5px !important; margin-top: 5px !important">Cancel Request</button>
                                         }
                                     }
                                     @*nu a trimis cerere*@
@@ -70,7 +71,7 @@
                                         {
                                             @Html.Hidden("ReceiverId", (int)Model.Id)
                                             @Html.Hidden("SenderId", (string)ViewBag.CurrentUser.Item1)
-                                            <button type="submit" class="btn btn-sm background-color-cream3">Send Request</button>
+                                            <button type="submit" class="btn btn-sm background-color-cream3" style="margin-bottom: 5px !important; margin-top: 5px !important">Send Request</button>
                                         }
                                     }
                                 }
@@ -81,9 +82,10 @@
                                 using (Html.BeginForm(actionName: "Delete", controllerName: "GroupMembers", routeValues: new { GroupId = Model.Id, UserId = (string)ViewBag.CurrentUser.Item1 }, method: FormMethod.Post, null, htmlAttributes: new { @style = "display: inline" }))
                                 {
                                     TempData["ReturnTo"] = "Groups";
-                                    <button type="submit" class="btn btn-sm background-color-cream3">Leave Group</button>
+                                    <button type="submit" class="btn btn-sm background-color-cream3" style="margin-bottom: 5px !important; margin-top: 5px !important">Leave Group</button>
                                 }
                             }
+                        </center>
                         </div>
                     </div>
                 </div>
