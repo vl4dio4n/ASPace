@@ -13,31 +13,29 @@
             <div asp-validation-summary="All" class="text-danger"></div>
             @if (Model.IsEmailConfirmed)
             {
-                <div class="form-floating input-group">
-                    <input asp-for="Email" class="form-control" disabled />
-                        <div class="input-group-append">
-                            <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
-                        </div>
-                    <label asp-for="Email" class="form-label"></label>
+                <div class="logres-form-div">
+                    <input asp-for="Email" class="logres-form-input" disabled />
+                        <span class="h-100 logres-form-input text-success font-weight-bold"  style="width: 50px; margin-left: 421px !important; background-color: var(--grey) !important;">✓</span>
+                    <label asp-for="Email" class="logres-form-label"></label>
                 </div>
                 <br/>
             }
             else
             {
-                <div class="form-floating">
-                    <input asp-for="Email" class="form-control" disabled />
-                    <label asp-for="Email" class="form-label"></label>
+                <div class="logres-form-div">
+                    <input asp-for="Email" class="logres-form-input" disabled />
+                    <label asp-for="Email" class="logres-form-label"></label>
                     <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                 </div>
                 <br/>
             }
-            <div class="form-floating">
-                <input asp-for="Input.NewEmail" class="form-control" autocomplete="email" aria-required="true" />
-                <label asp-for="Input.NewEmail" class="form-label"></label>
-                <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+            <div class="logres-form-div">
+                <input asp-for="Input.NewEmail" class="logres-form-input" autocomplete="email" aria-required="true" />
+                <label asp-for="Input.NewEmail" class="logres-form-label"></label>
+                 <div class="div-span"><span asp-validation-for="Input.NewEmail" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg btn-primary">Change email</button>
+            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg logres-form-button">Change email</button>
         </form>
     </div>
 </div>

@@ -1,56 +1,55 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = "Manage Your Profile";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
-
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
 <div class="row">
     <div class="col-md-6" style="margin-bottom: 100px !important;">
         <form id="profile-form" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-floating">
-                <input asp-for="Input.UserName" class="form-control"/>
-                <label asp-for="Input.UserName" class="form-label"></label>
-                <span asp-validation-for="Input.UserName" class="text-danger"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger eroare"></div>
+            <div class="logres-form-div">
+                <input asp-for="Input.UserName" class="logres-form-input"/>
+                <label asp-for="Input.UserName" class="logres-form-label"></label>
+                <div class="div-span"><span asp-validation-for="Input.UserName" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <div class="form-floating">
-                <input asp-for="Input.FirstName" class="form-control" />
-                <label asp-for="Input.FirstName" class="form-label"></label>
-                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            <div class="logres-form-div">
+                <input asp-for="Input.FirstName" class="logres-form-input" />
+                <label asp-for="Input.FirstName" class="logres-form-label"></label>
+                <div class="div-span"><span asp-validation-for="Input.FirstName" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <div class="form-floating">
-                <input asp-for="Input.LastName" class="form-control" />
-                <label asp-for="Input.LastName" class="form-label"></label>
-                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            <div class="logres-form-div">
+                <input asp-for="Input.LastName" class="logres-form-input" />
+                <label asp-for="Input.LastName" class="logres-form-label"></label>
+                <div class="div-span"><span asp-validation-for="Input.LastName" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <div class="form-floating">
-                <input asp-for="Input.BirthDate" class="form-control" />
-                <label asp-for="Input.BirthDate" class="form-label"></label>
-                <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
+            <div class="logres-form-div">
+                <input asp-for="Input.BirthDate" class="logres-form-input" />
+                <label asp-for="Input.BirthDate" class="logres-form-label"></label>
+                <div class="div-span"><span asp-validation-for="Input.BirthDate" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <div class="form-floating">
-                <textarea asp-for="Input.Description" class="form-control"></textarea>
-                <label asp-for="Input.Description" class="form-label"></label>
-                <span asp-validation-for="Input.Description" class="text-danger"></span>
+            <div class="logres-form-div">
+                <textarea asp-for="Input.Description" class="logres-form-input" style="max-height: 57px !important;"></textarea>
+                <label asp-for="Input.Description" class="logres-form-label"></label>
+                <div class="div-span"><span asp-validation-for="Input.Description" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <div class="form-floating">
-                <select asp-for="Input.IsPublic" class="form-control">    
+            <div class="logres-form-div">
+                <select asp-for="Input.IsPublic" class="logres-form-input">    
                     <option value="1">Public</option>
                     <option value="0">Private</option>
                 </select>
-                <label asp-for="Input.IsPublic" class="form-label"></label>
-                <span asp-validation-for="Input.IsPublic" class="text-danger"></span>
+                <label asp-for="Input.IsPublic" class="logres-form-label"></label>
+                <div class="div-span"><span asp-validation-for="Input.IsPublic" class="text-danger eroare"></span></div>
             </div>
             <br/>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg logres-form-button">Save</button>
         </form>
     </div>
 </div>

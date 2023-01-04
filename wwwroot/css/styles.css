@@ -78,6 +78,9 @@ a.navbar-brand:hover
     color: var(--cream3) !important;
 }
 
+.nav-link:focus {
+    color: var(--light-blue) !important;
+}
 .nav-button:hover{
     background-color: var(--cream2);
 }

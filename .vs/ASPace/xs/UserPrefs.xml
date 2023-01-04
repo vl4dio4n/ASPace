@@ -1,26 +1,37 @@
 ﻿<Properties StartupConfiguration="{E0126694-453D-4776-8F56-3DE2D87CE9E6}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ASPace PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ASPace PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/styles.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/FriendshipsController.cs">
     <Files>
       <File FileName="Views/Posts/Show.cshtml" Line="33" Column="92" />
       <File FileName="wwwroot/css/styles.css" Line="105" Column="2" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="75" Column="41" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="1" Column="1" />
       <File FileName="wwwroot/js/user_search.js" Line="51" Column="60" />
       <File FileName="Views/Chats/Index.cshtml" Line="8" Column="34" />
       <File FileName="Views/Shared/PartialChat.cshtml" Line="3" Column="38" />
       <File FileName="Views/Chats/Show.cshtml" Line="1" Column="3" />
+      <File FileName="Controllers/UsersController.cs" Line="15" Column="6" />
+      <File FileName="Controllers/GroupRequestsController.cs" Line="73" Column="30" />
+      <File FileName="Controllers/GroupMembersController.cs" Line="10" Column="37" />
+      <File FileName="Controllers/FriendshipsController.cs" Line="41" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASPace" expanded="True">
             <Node name="ASPace" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Areas" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="FriendshipsController.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Chats" expanded="True" />
@@ -44,6 +55,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
