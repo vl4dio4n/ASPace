@@ -60,7 +60,7 @@
                                 </form>
                             }
                         }
-                        else if (isFriend)
+                        else if (isFriend || ViewBag.isPublic)
                         {
                             <form method="post" action="/Chats/Show?FirstUser=@ViewBag.CurrentUser&SecondUser=@ViewBag.UserName">
                                 <button class="btn background-color-cream3 me-2" title="Send Message"><i class="bi bi-telegram"></i></button>
@@ -71,36 +71,45 @@
                         }
                     </div>
                 </div>
+                @*@if (isFriend || ViewBag.isPublic)
+                {*@
+                @if (isFriend || ViewBag.isPublic || ViewBag.UserName == ViewBag.CurrentUser) {
                 <p class="card-text m-1"><strong>Name:&nbsp;</strong>@ViewBag.FirstName @ViewBag.LastName</p>
                 <p class="card-text m-1"><strong>Age: &nbsp;</strong>@ViewBag.Age yo</p>
-                <p class="card-text m-1"></i><strong>Birth Date:&nbsp;</strong>@ViewBag.BirthDay<sup>@ViewBag.BirthDaySuffix</sup> of @ViewBag.BirthMonth</p>
+                <p class="card-text m-1"><strong>Birth Date:&nbsp;</strong>@ViewBag.BirthDay<sup>@ViewBag.BirthDaySuffix</sup> of @ViewBag.BirthMonth</p>
                 <p class="card-text m-1"><strong>Registration Date:&nbsp;</strong>@ViewBag.RegistrationDay<sup>@ViewBag.RegistrationDaySuffix</sup> of @ViewBag.RegistrationMonth</p>
                 <div class="card-text m-1">
-                    <strong>About:&nbsp;</strong>@ViewBag.Description</p>
+                    <strong>About:&nbsp;</strong>@ViewBag.Description
                 </div>
                 <div class="card-footer">
                     <small><strong>Last seen:&nbsp;</strong>@ViewBag.Interval @ViewBag.UM ago</small>
                 </div>
+                    }
+                @*}*@
             </div>
         </div>
 
-
-        @if (ViewBag.Groups != null)
-        {
-            @foreach (ASPace.Models.Group group in ViewBag.Groups)
+        @if (isFriend || ViewBag.isPublic || ViewBag.UserName == ViewBag.CurrentUser)
             {
+        @if (ViewBag.Groups != null)
+            {
+            @foreach (ASPace.Models.Group group in ViewBag.Groups)
+                {
                 @Html.Partial("PartialGroup", group)
+                }
             }
-        }
+            }
     </div>
     <div class="col-md-4">
+        @if (isFriend || ViewBag.isPublic || ViewBag.UserName == ViewBag.CurrentUser)
+            {
         <div class="card card-blue2">
             <div class="card-body">
                 <h2><span class="card-title badge bg-info">Friend List</span></h2>
                 <ul class="list-unstyled mb-0 overflow-auto" style="max-height: 750px">
                     @for (int i = 0; i < ViewBag.Friends.Length; i++)
-                    {
-                        var friend = ViewBag.Friends[i];
+                        {
+                            var friend = ViewBag.Friends[i];
                         <li class="p-2 border-bottom userslist-item-hover" style="border-bottom-color: var(--blue5) !important;">
                             <span class="d-flex justify-content-between ">
                                 <div class="d-flex flex-row">
@@ -117,39 +126,40 @@
                                                 hasFriend = true;
                                     }
                                     @if (ViewBag.UserName == ViewBag.CurrentUser)
-                                    {
+                                        {
                                         <form method="post" action="/Friendships/Delete/@friend.UserId">
                                             <button class="btn btn-sm background-color-cream3">Unfriend</button>
                                         </form>
-                                    }
-                                    else if (hasFriend)
-                                    {
-                                        <button class="btn btn-sm background-color-cream3" title="You are already friend with this person" disabled>Add friend</button>
-                                    }
-                                    else if (!hasFriend && friend.UserName != ViewBag.CurrentUser)
-                                    {
-                                        bool hasRequest = false;
-                                        for (int k = 0; k < ViewBag.MyRequests.Length && !hasRequest; k++)
-                                            if (ViewBag.MyRequests[k].ReceiverId == friend.UserId)
-                                                hasRequest = true;
-
-                                        if (hasRequest)
-                                        {
-                                            <button class="btn btn-sm background-color-cream3" title="Friend request already sent" disabled>Add friend</button>
                                         }
-                                        else
+                                        else if (hasFriend)
                                         {
+                                        <button class="btn btn-sm background-color-cream3" title="You are already friend with this person" disabled>Add friend</button>
+                                        }
+                                        else if (!hasFriend && friend.UserName != ViewBag.CurrentUser)
+                                        {
+                                            bool hasRequest = false;
+                                            for (int k = 0; k < ViewBag.MyRequests.Length && !hasRequest; k++)
+                                                if (ViewBag.MyRequests[k].ReceiverId == friend.UserId)
+                                                    hasRequest = true;
+
+                                            if (hasRequest)
+                                            {
+                                            <button class="btn btn-sm background-color-cream3" title="Friend request already sent" disabled>Add friend</button>
+                                            }
+                                            else
+                                            {
                                             <form method="post" action="/FriendRequests/New/@friend.UserId">
                                                 <button class="btn btn-sm background-color-cream3">Add friend</button>
                                             </form>
+                                            }
                                         }
-                                    }
                                 </div>
                             </span>
                         </li>
-                    }
+                                        }
                 </ul>
             </div>
         </div>
+                                        }
     </div>
 </div>

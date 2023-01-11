@@ -101,15 +101,17 @@ namespace ArticlesApp.Controllers
                 if (ViewBag.Friends[i].UserId == user.Id)
                     isFriend = true;
 
-            if (user.UserName == id || isFriend || ViewBag.IsPublic)
-            {
+            //if (user.UserName == id || isFriend || ViewBag.IsPublic)
+            //if (user.UserName == id || isFriend || ViewBag.IsPublic)
+
+            //{
                 return View();
-            }
-            else
-            {
-                TempData["message"] = "This profile is private.";
-                return StatusCode(StatusCodes.Status403Forbidden);
-            }
+            //}
+            //else
+            //{
+            //    TempData["message"] = "This profile is private.";
+            //    return StatusCode(StatusCodes.Status403Forbidden);
+            //}
         }
 
         private void SetUserProfile(string username)

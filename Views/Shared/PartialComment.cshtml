@@ -25,9 +25,13 @@
                 <hr />
                 <div class="d-flex flex-direction-row justify-content-center">
                     <!--Delete/Edit Buttons (requires permission)-->
+                    @if (ViewBag.CurrentUser.Item1 == Model.UserId)
+                        {
+                            <a href="/Comments/Edit/@Model.CommentId" class="btn btn-sm background-color-cream3 me-2">Edit</a>
+                        }
                     @if (ViewBag.CurrentUser.Item2 || ViewBag.CurrentUser.Item1 == Model.UserId)
                     {
-                        <a href="/Comments/Edit/@Model.CommentId" class="btn btn-sm background-color-cream3 me-2">Edit</a>
+                        @*<a href="/Comments/Edit/@Model.CommentId" class="btn btn-sm background-color-cream3 me-2">Edit</a>*@
                         @using (Html.BeginForm(actionName: "Delete", controllerName: "Comments", method: FormMethod.Post, routeValues: new { id = Model.CommentId }))
                         {
                             <button type="submit" class="btn btn-sm background-color-cream3 me-2">Delete</button>

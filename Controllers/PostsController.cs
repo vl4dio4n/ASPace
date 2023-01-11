@@ -46,7 +46,8 @@ namespace ASPace.Controllers
 
             IQueryable<Post>? posts = db.Posts.Where(u => (u.UserId == CurrUserId ||
                                         (u.GroupId != null && myGroups.Contains((int)u.GroupId)) ||
-                                        (u.GroupId == null && myFriends.Contains(u.UserId))))
+                                        (u.GroupId == null && (myFriends.Contains(u.UserId)))
+                                        ))
                                 .OrderByDescending(a => a.Date)
                                 .Include("User").Include("Group");
 
@@ -60,7 +61,7 @@ namespace ASPace.Controllers
             
             List<int> postsIds = db.Posts.Where(
                 post => (post.Title.Contains(search) || post.Content.Contains(search))
-                && (CurrUserId == post.UserId)
+                //&& (CurrUserId == post.UserId)
                 ).Select(p => p.PostId).ToList();
 
             posts = posts.Where(post => postsIds.Contains(post.PostId)).OrderByDescending(a => a.Date).Include("User").Include("Group"); ;
@@ -75,7 +76,7 @@ namespace ASPace.Controllers
         public IActionResult Show(int id)
         {
             Post? post = db.Posts.Where(m => m.PostId == id).Include("User")
-                .Include("PostLikes.User").Include("Comments.CommentLikes").Include("Group").First();
+                .Include("PostLikes.User").Include("Comments.CommentLikes.User").Include("Group").First();
             if (post == null)
             {
                 TempData["message"] = "The post doesn't exist!";

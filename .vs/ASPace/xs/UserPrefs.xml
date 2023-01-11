@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{E0126694-453D-4776-8F56-3DE2D87CE9E6}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ASPace PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/FriendshipsController.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ASPace PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Groups/Show.cshtml">
     <Files>
       <File FileName="Views/Posts/Show.cshtml" Line="33" Column="92" />
-      <File FileName="wwwroot/css/styles.css" Line="105" Column="2" />
+      <File FileName="wwwroot/css/styles.css" Line="267" Column="1" />
       <File FileName="Views/Shared/_Layout.cshtml" Line="1" Column="1" />
       <File FileName="wwwroot/js/user_search.js" Line="51" Column="60" />
       <File FileName="Views/Chats/Index.cshtml" Line="8" Column="34" />
@@ -17,8 +16,20 @@
       <File FileName="Views/Chats/Show.cshtml" Line="1" Column="3" />
       <File FileName="Controllers/UsersController.cs" Line="15" Column="6" />
       <File FileName="Controllers/GroupRequestsController.cs" Line="73" Column="30" />
-      <File FileName="Controllers/GroupMembersController.cs" Line="10" Column="37" />
+      <File FileName="Controllers/GroupMembersController.cs" Line="77" Column="2" />
       <File FileName="Controllers/FriendshipsController.cs" Line="41" Column="41" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/_Layout.cshtml" Line="13" Column="11" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/Index.cshtml" Line="4" Column="38" />
+      <File FileName="Areas/Identity/Pages/Account/Register.cshtml" Line="104" Column="117" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" Line="6" Column="120" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" Line="32" Column="77" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/PersonalData.cshtml" Line="23" Column="1" />
+      <File FileName="wwwroot/css/site.css" Line="1" Column="1" />
+      <File FileName="wwwroot/css/variables.css" Line="10" Column="17" />
+      <File FileName="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" Line="3888" Column="2" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/Email.cshtml" Line="18" Column="130" />
+      <File FileName="Views/Groups/Show.cshtml" Line="89" Column="31" />
+      <File FileName="Controllers/GroupsController.cs" Line="184" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,10 +39,20 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="Areas" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="FriendshipsController.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="Manage" expanded="True">
+                        <Node name="ChangePassword.cshtml" expanded="True" />
+                        <Node name="Index.cshtml" expanded="True" />
+                      </Node>
+                      <Node name="Register.cshtml" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Chats" expanded="True" />
@@ -45,6 +66,15 @@
                 <Node name="css" expanded="True" />
                 <Node name="images" expanded="True" />
                 <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="bootstrap" expanded="True">
+                    <Node name="dist" expanded="True">
+                      <Node name="css" expanded="True">
+                        <Node name="bootstrap.css" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -55,4 +85,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
