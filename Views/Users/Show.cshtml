@@ -60,7 +60,7 @@
                                 </form>
                             }
                         }
-                        else if (isFriend || ViewBag.isPublic)
+                        else if ((isFriend || ViewBag.isPublic) && (ViewBag.UserName != ViewBag.CurrentUser))
                         {
                             <form method="post" action="/Chats/Show?FirstUser=@ViewBag.CurrentUser&SecondUser=@ViewBag.UserName">
                                 <button class="btn background-color-cream3 me-2" title="Send Message"><i class="bi bi-telegram"></i></button>
